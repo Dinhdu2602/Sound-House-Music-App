@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sound_house_app/views/album_view.dart';
 
 import '../widget/album_card.dart';
 import '../widget/song_card.dart';
@@ -66,77 +65,37 @@ class _HomeViewState extends State<HomeView> {
                         ],
                       ),
                     ),
-                    SingleChildScrollView(
+                    const SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      physics: const BouncingScrollPhysics(),
-                      padding: const EdgeInsets.all(16),
+                      physics: BouncingScrollPhysics(),
+                      padding: EdgeInsets.all(16),
                       child: Row(
                         children: [
                           AlbumCard(
                             label: "Best Mode",
-                            image: const AssetImage("assets/album3.jpg"),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const AlbumView(),
-                                ),
-                              );
-                            },
+                            image: AssetImage("assets/album3.jpg"),
                           ),
-                          const SizedBox(width: 16),
+                          SizedBox(width: 16),
                           AlbumCard(
                             label: "Motivation Mix",
-                            image: const AssetImage("assets/album2.jpg"),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const AlbumView(),
-                                ),
-                              );
-                            },
+                            image: AssetImage("assets/album2.jpg"),
                           ),
-                          const SizedBox(width: 16),
+                          SizedBox(width: 16),
                           AlbumCard(
                             label: "Top 50-Global",
-                            image: const AssetImage("assets/top50.jpg"),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const AlbumView(),
-                                ),
-                              );
-                            },
+                            image: AssetImage("assets/top50.jpg"),
                           ),
-                          const SizedBox(width: 16),
+                          SizedBox(width: 16),
                           AlbumCard(
                             label: "Power Songs",
-                            image: const AssetImage("assets/album7.jpg"),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const AlbumView(),
-                                ),
-                              );
-                            },
+                            image: AssetImage("assets/album7.jpg"),
                           ),
-                          const SizedBox(width: 16),
+                          SizedBox(width: 16),
                           AlbumCard(
                             label: "Top songs - Global",
-                            image: const AssetImage("assets/album8.jpg"),
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const AlbumView(),
-                                ),
-                              );
-                            },
+                            image: AssetImage("assets/album8.jpg"),
                           ),
-                          const SizedBox(width: 16),
+                          SizedBox(width: 16),
                         ],
                       ),
                     ),
