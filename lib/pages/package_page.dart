@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sound_house_app/providers/fav_provider.dart';
 import 'package:sound_house_app/providers/package_provider.dart';
+import 'package:sound_house_app/providers/recent_played_provider.dart';
+import 'package:sound_house_app/providers/song_provider.dart';
+import 'package:sound_house_app/widget/music_item.dart';
 
 class PackagePage extends StatefulWidget {
   const PackagePage({super.key});
@@ -13,6 +17,9 @@ class _PackagePageState extends State<PackagePage> {
   @override
   Widget build(BuildContext context) {
     PackageProvider packageProvider = Provider.of<PackageProvider>(context);
+    FavProvider favProvider = Provider.of<FavProvider>(context);
+    SongProvider songProvider = Provider.of<SongProvider>(context);
+    RecentProvider recentProvider = Provider.of<RecentProvider>(context);
     return Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
@@ -111,14 +118,25 @@ class _PackagePageState extends State<PackagePage> {
                                 ],
                               ),
                               const Spacer(),
-                              Container(
-                                padding: const EdgeInsets.all(5),
-                                decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Color(0x00e40a15)),
-                                child: const Icon(
-                                  Icons.play_arrow_rounded,
-                                  size: 52,
+                              GestureDetector(
+                                onTap: () {
+                                  songProvider.isPlaying
+                                      ? songProvider.audioPlayer.pause()
+                                      : songProvider.currentSong =
+                                          packageProvider
+                                              .currentPackage!.songs![0];
+                                  recentProvider.setRecent(packageProvider
+                                      .currentPackage!.songs![0]);
+                                },
+                                child: Container(
+                                  padding: const EdgeInsets.all(5),
+                                  decoration: const BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Color(0x00e40a15)),
+                                  child: const Icon(
+                                    Icons.play_arrow_rounded,
+                                    size: 52,
+                                  ),
                                 ),
                               ),
                             ],
@@ -151,56 +169,11 @@ class _PackagePageState extends State<PackagePage> {
                         padding: index == 0
                             ? const EdgeInsets.only(top: 0)
                             : const EdgeInsets.only(top: 10),
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 10),
-                          child: Row(
-                            children: [
-                              Container(
-                                height: 40,
-                                width: 40,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            'assets/cover/${data.image}'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              const SizedBox(width: 10),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      data.title!,
-                                      style: const TextStyle(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                    const SizedBox(height: 5),
-                                    Text(
-                                      data.singer!,
-                                      style: const TextStyle(
-                                          color: Colors.white, fontSize: 12),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                    Icons.favorite_border_rounded,
-                                    color: Colors.white,
-                                  )),
-                              IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                    Icons.more_vert_rounded,
-                                    color: Colors.white,
-                                  )),
-                            ],
-                          ),
-                        ),
+                        child: MusicItem(
+                            songProvider: songProvider,
+                            data: data,
+                            recentProvider: recentProvider,
+                            favProvider: favProvider),
                       );
                     })
                   ],
