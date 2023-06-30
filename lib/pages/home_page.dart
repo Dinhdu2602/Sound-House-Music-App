@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sound_house_app/models/artists.dart';
 import 'package:sound_house_app/models/packages.dart';
 import 'package:sound_house_app/models/songs.dart';
+import 'package:sound_house_app/pages/package_page.dart';
 import 'package:sound_house_app/widget/fav_artist_item.dart';
 import 'package:sound_house_app/widget/home_page_header.dart';
 import 'package:sound_house_app/widget/home_page_title.dart';
@@ -94,9 +95,19 @@ class _HomePageState extends State<HomePage> {
                           padding: index == 0
                               ? const EdgeInsets.only(left: 10, right: 10)
                               : const EdgeInsets.only(left: 10),
-                          child: SongPakageItem(
-                              image: 'package/${madeForYou[index].image}',
-                              text: madeForYou[index].name!),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const PackagePage(),
+                                ),
+                              );
+                            },
+                            child: SongPakageItem(
+                                image: 'package/${madeForYou[index].image}',
+                                text: madeForYou[index].name!),
+                          ),
                         ))
               ],
             ),
