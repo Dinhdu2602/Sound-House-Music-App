@@ -14,3 +14,14 @@ Color hexToColor(String hex) {
   return Color(int.parse(hex.substring(1), radix: 16) +
       (hex.length == 7 ? 0xFF000000 : 0x00000000));
 }
+
+TextStyle textButton = const TextStyle(
+  color: Colors.white,
+  fontSize: 18,
+  fontWeight: FontWeight.w700,
+);
+TextStyle subTitle = const TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                ),

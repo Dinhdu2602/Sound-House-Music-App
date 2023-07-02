@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sound_house_app/constants/colors.dart';
-
-import 'login_page.dart';
+import 'package:sound_house_app/constants/theme.dart';
+import 'package:sound_house_app/screens/dashboard_sign_in_page.dart';
 
 class GetStartedPage extends StatefulWidget {
   const GetStartedPage({super.key});
@@ -17,7 +16,7 @@ class _GetStartedPageState extends State<GetStartedPage> {
         body: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/getStarted.png'),
+                image: AssetImage('assets/cover_page/getStarted.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -43,7 +42,7 @@ class _GetStartedPageState extends State<GetStartedPage> {
                   onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const LoginPage())),
+                          builder: (context) => const DashboardSignIn())),
                   child: const Text(
                     'Get Started',
                     style: TextStyle(
