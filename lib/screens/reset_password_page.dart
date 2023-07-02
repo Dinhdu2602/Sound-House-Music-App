@@ -26,65 +26,73 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
           },
         ),
       ),
-      body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(
-                height: 200,
-              ),
-              const Text(
-                'Reset Password',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 32,
-                  fontWeight: FontWeight.w700,
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/cover_page/SoundHouseCover.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(
+                  height: 200,
                 ),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              Text(
-                'Please enter your email address',
-                style: subTitle.copyWith(fontWeight: FontWeight.w600),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              const ResetForm(),
-              const SizedBox(
-                height: 40,
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LoginPage(),
-                      ));
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(
-                      0x00e40a15), // Replace with your desired sign-in button color
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
+                const Text(
+                  'Reset Password',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 32,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
-                child: const Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-                  child: Text(
-                    'Reset Password',
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      color: Colors.white,
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  'Please enter your email address',
+                  style: subTitle.copyWith(fontWeight: FontWeight.w600),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const ResetForm(),
+                const SizedBox(
+                  height: 40,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginPage(),
+                        ));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(
+                        0x00e40a15), // Replace with your desired sign-in button color
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                    child: Text(
+                      'Reset Password',
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
-          )),
+              ],
+            )),
+      ),
     );
   }
 }
