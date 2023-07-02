@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sound_house_app/pages/home_page.dart';
+import 'package:sound_house_app/pages/music_detail.dart';
 import 'package:sound_house_app/providers/page_provider.dart';
+import 'package:sound_house_app/providers/song_provider.dart';
 import 'package:sound_house_app/widget/blur.dart';
+import 'package:sound_house_app/widget/current_song.dart';
 import 'package:sound_house_app/widget/custom_bottom_nav.dart';
 
 class MainPage extends StatefulWidget {
@@ -17,6 +20,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     PageProvider pageProvider = Provider.of<PageProvider>(context);
+    SongProvider songProvider = Provider.of<SongProvider>(context);
     Widget body() {
       switch (pageProvider.currentPage) {
         case 0:

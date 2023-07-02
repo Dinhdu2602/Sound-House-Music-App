@@ -16,8 +16,8 @@ class HomePageHeader extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Hello Sir',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  'SOUND HOUSE',
+                  style: TextStyle(color: Color(0x00e40a15), fontSize: 18),
                 ),
                 SizedBox(
                   height: 10,

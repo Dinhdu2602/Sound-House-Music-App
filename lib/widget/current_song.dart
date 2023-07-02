@@ -55,7 +55,7 @@ class CurrentSong extends StatelessWidget {
                     )
                   : const Icon(
                       Icons.favorite_border_rounded,
-                      color: Color(0x00e40a15),
+                      color: Colors.white,
                     )),
           GestureDetector(
             onTap: () {

@@ -88,6 +88,7 @@ class _HomePageState extends State<HomePage> {
                                         onTap: () {
                                           songProvider.currentSong =
                                               recent[index];
+                                          packageProvider.currentPackage = null;
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lyric/lyrics_reader.dart';
 import 'package:provider/provider.dart';
-
 import 'package:sound_house_app/providers/fav_provider.dart';
 import 'package:sound_house_app/providers/package_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
-
 import 'package:sound_house_app/widget/music_controller.dart';
+import 'package:sound_house_app/widget/song_lyric.dart';
 
 class MusicDetail extends StatefulWidget {
   const MusicDetail({super.key});
@@ -75,23 +74,7 @@ class _MusicDetailState extends State<MusicDetail> {
           body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height / 6,
-                child: LyricsReader(
-                  model: LyricsModelBuilder.create()
-                      .bindLyricToMain(songProvider.lyric!)
-                      .getModel(),
-                  position: songProvider.playProgress!.toInt(),
-                  lyricUi: lyricUI,
-                  playing: songProvider.isPlaying,
-                  emptyBuilder: () => Center(
-                    child: Text(
-                      'No Lyric',
-                      style: lyricUI.getOtherMainTextStyle(),
-                    ),
-                  ),
-                ),
-              ),
+              SongLyric(songProvider: songProvider, lyricUI: lyricUI),
               MusicController(
                   songProvider: songProvider,
                   favProvider: favProvider,
