@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sound_house_app/screens/what_news.dart';
 
 class HomePageHeader extends StatelessWidget {
   const HomePageHeader({
@@ -37,8 +38,15 @@ class HomePageHeader extends StatelessWidget {
             ),
             child: Stack(
               children: [
-                const Icon(
-                  Icons.notifications_outlined,
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const WhatNews(),
+                        ));
+                  },
+                  icon: const Icon(Icons.notifications_outlined),
                   color: Colors.white,
                 ),
                 Positioned(

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sound_house_app/pages/home_page.dart';
-import 'package:sound_house_app/pages/music_detail.dart';
+import 'package:sound_house_app/screens/home_page.dart';
+import 'package:sound_house_app/screens/music_detail.dart';
 import 'package:sound_house_app/providers/page_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
+import 'package:sound_house_app/screens/search.dart';
 import 'package:sound_house_app/widget/blur.dart';
 import 'package:sound_house_app/widget/current_song.dart';
 import 'package:sound_house_app/widget/custom_bottom_nav.dart';
@@ -26,11 +27,7 @@ class _MainPageState extends State<MainPage> {
         case 0:
           return const HomePage();
         case 1:
-          return const Center(
-              child: Text(
-            'Search',
-            style: TextStyle(color: Color(0x00e40a15), fontSize: 32),
-          ));
+          return const SearchScreen();
         case 2:
           return const Center(
               child: Text(
