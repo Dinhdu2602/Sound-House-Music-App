@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sound_house_app/screens/click_search_combox.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -83,31 +84,30 @@ class SearchScreen extends StatelessWidget {
                       color: const Color(0xffffffff),
                       borderRadius: BorderRadius.circular(5 * fem),
                     ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                            // vectordyb (119:105)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 7 * fem, 1 * fem),
-                            width: 15 * fem,
-                            height: 15 * fem,
-                            child: const Icon(
-                              Icons.search_rounded,
-                              color: Colors.black,
-                            )),
-                        Text(
-                          // whatdoyouwanttolistentoxFB (119:104)
-                          'What do you want to listen to?',
-                          style: TextStyle(
-                            fontFamily: 'Source Sans Pro',
-                            fontSize: 14 * ffem,
-                            fontWeight: FontWeight.w400,
-                            height: 1.2575 * ffem / fem,
-                            color: const Color(0xff000000),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ClickSearchScreen(),
+                            ));
+                      },
+                      child: TextField(
+                        style: const TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                            borderSide: BorderSide.none,
                           ),
+                          hintText: 'What do you want to listen to?',
+                          prefixIcon:
+                              const Icon(Icons.search, color: Colors.black),
+                          prefixIconColor:
+                              const Color.fromARGB(255, 170, 166, 166),
                         ),
-                      ],
+                      ),
                     ),
                   ),
                   Container(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sound_house_app/screens/account_screen.dart';
 import 'package:sound_house_app/screens/home_page.dart';
+import 'package:sound_house_app/screens/library.dart';
 import 'package:sound_house_app/screens/music_detail.dart';
 import 'package:sound_house_app/providers/page_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
@@ -29,11 +31,7 @@ class _MainPageState extends State<MainPage> {
         case 1:
           return const SearchScreen();
         case 2:
-          return const Center(
-              child: Text(
-            'Library',
-            style: TextStyle(color: Color(0x00e40a15), fontSize: 32),
-          ));
+          return const LibraryScreen();
         case 3:
           return const Center(
               child: Text(
@@ -41,11 +39,7 @@ class _MainPageState extends State<MainPage> {
             style: TextStyle(color: Color(0x00e40a15), fontSize: 32),
           ));
         case 4:
-          return const Center(
-              child: Text(
-            'Profile',
-            style: TextStyle(color: Color(0x00e40a15), fontSize: 32),
-          ));
+          return const AccountScreen();
         default:
           return const HomePage();
       }
