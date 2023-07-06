@@ -26,6 +26,9 @@ List<SongModel> listSongs = [
         'user2',
         'user3',
         'user4',
+        'user5',
+        'user6',
+        'user7',
       ]),
   SongModel(
     idSong: 'id_song2',
@@ -38,6 +41,7 @@ List<SongModel> listSongs = [
       'user2',
       'user3',
       'user4',
+      'user7',
     ],
   ),
   SongModel(
@@ -75,6 +79,7 @@ List<SongModel> listSongs = [
     likes: [
       'user2',
       'user3',
+      'user5',
     ],
   ),
   SongModel(
@@ -99,6 +104,8 @@ List<SongModel> listSongs = [
     lyric: 'Keisya Levronka - Tak Ingin Usai Official Lyric Video.lrc',
     likes: [
       'user2',
+      'user3',
+      'user6',
     ],
   ),
 ];

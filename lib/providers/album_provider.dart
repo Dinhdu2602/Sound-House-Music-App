@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sound_house_app/models/packages.dart';
+import 'package:sound_house_app/models/album.dart';
 
 class AlbumProvider with ChangeNotifier {
   AlbumModel? _currentAlbum;
   AlbumModel? get currentAlbum => _currentAlbum;
-  set currentPackage(PackageModel? current) {
+  set currentPackage(AlbumModel? current) {
     _currentAlbum = current;
     notifyListeners();
   }
