@@ -1,13 +1,20 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+<<<<<<< Updated upstream
 import 'package:sound_house_app/screens/Signin-Signout/get_started_page.dart';
+=======
+>>>>>>> Stashed changes
 import 'package:sound_house_app/providers/fav_provider.dart';
 import 'package:sound_house_app/providers/package_provider.dart';
 import 'package:sound_house_app/providers/page_provider.dart';
 import 'package:sound_house_app/providers/recent_played_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
+import 'package:sound_house_app/screens/Signin-Signout/get_started_page.dart';
 
-void main() {
+Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

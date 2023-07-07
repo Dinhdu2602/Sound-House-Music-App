@@ -50,29 +50,29 @@ class _AlbumLibraryScreenState extends State<AlbumLibraryScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
-            child: SingleChildScrollView(
-              physics: const BouncingScrollPhysics(),
-              child: Column(
-                children: [
-                  ...List.generate(albumProvider.currentAlbum!.songs!.length,
-                      (index) {
-                    var data = albumProvider.currentAlbum!.songs![index];
-                    return Padding(
-                      padding: index == 0
-                          ? const EdgeInsets.only(top: 0)
-                          : const EdgeInsets.only(top: 10),
-                      child: MusicItem(
-                          songProvider: songProvider,
-                          data: data,
-                          recentProvider: recentProvider,
-                          favProvider: favProvider),
-                    );
-                  })
-                ],
-              ),
-            ),
-          )
+          // Expanded(
+          //   child: SingleChildScrollView(
+          //     physics: const BouncingScrollPhysics(),
+          //     child: Column(
+          //       children: [
+          //         ...List.generate(albumProvider.currentAlbum!.songs!.length,
+          //             (index) {
+          //           var data = albumProvider.currentAlbum!.songs![index];
+          //           return Padding(
+          //             padding: index == 0
+          //                 ? const EdgeInsets.only(top: 0)
+          //                 : const EdgeInsets.only(top: 10),
+          //             child: MusicItem(
+          //                 songProvider: songProvider,
+          //                 data: data,
+          //                 recentProvider: recentProvider,
+          //                 favProvider: favProvider),
+          //           );
+          //         })
+          //       ],
+          //     ),
+          //   ),
+          // )
         ],
       ),
     );

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "915839036582",
+    "firebase_url": "https://soundhouse-20471-default-rtdb.firebaseio.com",
+    "project_id": "soundhouse-20471",
+    "storage_bucket": "soundhouse-20471.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915839036582:android:c7222287c4d04886f3d867",
+        "android_client_info": {
+          "package_name": "com.example.sound_house_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915839036582-4mdm15fd3bp5ku5iv90g40itvhk74pv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUrwkMDemoRDRH2bGFpqzmEuOIvSCAJG4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915839036582-4mdm15fd3bp5ku5iv90g40itvhk74pv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

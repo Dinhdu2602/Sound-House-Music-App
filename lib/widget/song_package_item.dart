@@ -19,7 +19,7 @@ class SongPakageItem extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
-                  image: AssetImage('asser/cover/$image'), fit: BoxFit.cover)),
+                  image: AssetImage('assets/$image'), fit: BoxFit.cover)),
         ),
         const SizedBox(
           height: 10,

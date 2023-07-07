@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
+<<<<<<< Updated upstream
 import 'package:sound_house_app/screens/Signin-Signout/login_page.dart';
+=======
+>>>>>>> Stashed changes
 import 'package:sound_house_app/widget/checkbox.dart';
 import 'package:sound_house_app/widget/sign_up_form.dart';
+
+import 'login_page.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});

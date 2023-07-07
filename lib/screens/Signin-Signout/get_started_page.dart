@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
-import 'package:sound_house_app/screens/Signin-Signout/dashboard_sign_in_page.dart';
+import 'package:sound_house_app/screens/Signin-Signout/auth_page.dart';
+
+import 'dashboard_sign_in_page.dart';
+// import 'package:sound_house_app/screens/dashboard_sign_in_page.dart';
 
 class GetStartedPage extends StatefulWidget {
   const GetStartedPage({super.key});
@@ -14,7 +17,6 @@ class _GetStartedPageState extends State<GetStartedPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/cover_page/getStarted.png'),
@@ -26,7 +28,7 @@ class _GetStartedPageState extends State<GetStartedPage> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Text(
-                  'A digital music, podcast, and video service that gives you access to milions of songs and other content from creators all over the world.',
+                  'A digital music, podcast, and video service that gives you access to millions of songs and other content from creators all over the world.',
                   style: TextStyle(
                       color: ColorConstants.starterWhite,
                       fontSize: 17,
@@ -43,7 +45,7 @@ class _GetStartedPageState extends State<GetStartedPage> {
                   onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const DashboardSignIn())),
+                          builder: (context) => const AuthPage())),
                   child: const Text(
                     'Get Started',
                     style: TextStyle(

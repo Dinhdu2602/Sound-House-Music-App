@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sound_house_app/screens/account_screen.dart';
 import 'package:sound_house_app/screens/home_page.dart';
+<<<<<<< Updated upstream
 import 'package:sound_house_app/screens/library_screen/library.dart';
+=======
+>>>>>>> Stashed changes
 import 'package:sound_house_app/screens/music_detail.dart';
 import 'package:sound_house_app/providers/page_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
@@ -10,6 +13,8 @@ import 'package:sound_house_app/screens/search.dart';
 import 'package:sound_house_app/widget/blur.dart';
 import 'package:sound_house_app/widget/current_song.dart';
 import 'package:sound_house_app/widget/custom_bottom_nav.dart';
+
+import 'library_screen/library.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
