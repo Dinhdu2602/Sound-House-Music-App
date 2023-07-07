@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sound_house_app/screens/library_screen/library.dart';
 
-class LibraryTemplate extends StatelessWidget {
-  const LibraryTemplate({super.key});
+class LibraryBehaviorList extends StatelessWidget {
+  const LibraryBehaviorList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -307,10 +308,24 @@ class LibraryTemplate extends StatelessWidget {
                               0 * fem, 3 * fem, 0 * fem, 0 * fem),
                           width: 12 * fem,
                           height: 12 * fem,
-                          child: const Icon(
-                            Icons.dashboard_rounded,
-                            size: 12,
-                            color: Colors.white,
+                          child: Column(
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const LibraryScreen(),
+                                      ));
+                                },
+                                icon: const Icon(
+                                  Icons.filter_list_outlined,
+                                  size: 12,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],

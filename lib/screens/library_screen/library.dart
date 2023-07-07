@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sound_house_app/screens/library_screen/album_library.dart';
+import 'package:sound_house_app/screens/library_screen/library_template.dart';
+import 'package:sound_house_app/screens/library_screen/library_screen_2.dart';
 
 class LibraryScreen extends StatelessWidget {
   const LibraryScreen({super.key});
@@ -155,24 +158,33 @@ class LibraryScreen extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Container(
-                          // frame1haZ (31:7)
-                          width: 65 * fem,
-                          height: 24 * fem,
-                          decoration: BoxDecoration(
-                            color: const Color(0xff1f1f1f),
-                            borderRadius: BorderRadius.circular(30 * fem),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Playlist',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontFamily: 'Inter',
-                                fontSize: 11 * ffem,
-                                fontWeight: FontWeight.w500,
-                                height: 1.2125 * ffem / fem,
-                                color: const Color(0xffffffff),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const LibraryTemplate(),
+                                ));
+                          },
+                          child: Container(
+                            // frame1haZ (31:7)
+                            width: 65 * fem,
+                            height: 24 * fem,
+                            decoration: BoxDecoration(
+                              color: const Color(0xff1f1f1f),
+                              borderRadius: BorderRadius.circular(30 * fem),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Playlist',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontFamily: 'Inter',
+                                  fontSize: 11 * ffem,
+                                  fontWeight: FontWeight.w500,
+                                  height: 1.2125 * ffem / fem,
+                                  color: const Color(0xffffffff),
+                                ),
                               ),
                             ),
                           ),
@@ -307,10 +319,24 @@ class LibraryScreen extends StatelessWidget {
                               0 * fem, 3 * fem, 0 * fem, 0 * fem),
                           width: 12 * fem,
                           height: 12 * fem,
-                          child: const Icon(
-                            Icons.dashboard_rounded,
-                            size: 12,
-                            color: Colors.white,
+                          child: Column(
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const LibraryBehaviorList(),
+                                      ));
+                                },
+                                icon: const Icon(
+                                  Icons.dashboard_rounded,
+                                  size: 12,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
@@ -330,87 +356,101 @@ class LibraryScreen extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Container(
-                              // image14sYD (32:162)
-                              margin: EdgeInsets.fromLTRB(
-                                  0 * fem, 0 * fem, 13 * fem, 0 * fem),
-                              width: 65 * fem,
-                              height: 65 * fem,
-                              child: Image.asset(
-                                'assets/album/image 18.png',
-                                fit: BoxFit.cover,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const AlbumLibraryScreen(),
+                                    ));
+                              },
+                              child: Container(
+                                // image14sYD (32:162)
+                                margin: EdgeInsets.fromLTRB(
+                                    0 * fem, 0 * fem, 13 * fem, 0 * fem),
+                                width: 65 * fem,
+                                height: 65 * fem,
+                                child: Image.asset(
+                                  'assets/album/image 18.png',
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
-                            Container(
-                              // autogroup2tl5LRo (6FggRdyGeAtNNZEGRN2TL5)
-                              margin: EdgeInsets.fromLTRB(
-                                  0 * fem, 16 * fem, 0 * fem, 14 * fem),
-                              width: 102 * fem,
-                              height: double.infinity,
-                              child: Stack(
-                                children: [
-                                  Positioned(
-                                    // likedsongsdA1 (33:163)
-                                    left: 1 * fem,
-                                    top: 0 * fem,
-                                    child: Align(
-                                      child: SizedBox(
-                                        width: 88 * fem,
-                                        height: 22 * fem,
-                                        child: Text(
-                                          'Liked Songs',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontFamily: 'Source Sans Pro',
-                                            fontSize: 17 * ffem,
-                                            fontWeight: FontWeight.w600,
-                                            height: 1.2575 * ffem / fem,
-                                            color: const Color(0xffffffff),
+                            Column(
+                              children: [
+                                Container(
+                                  // autogroup2tl5LRo (6FggRdyGeAtNNZEGRN2TL5)
+                                  margin: EdgeInsets.fromLTRB(
+                                      0 * fem, 16 * fem, 0 * fem, 14 * fem),
+                                  width: 102 * fem,
+                                  height: double.infinity,
+                                  child: Stack(
+                                    children: [
+                                      Positioned(
+                                        // likedsongsdA1 (33:163)
+                                        left: 1 * fem,
+                                        top: 0 * fem,
+                                        child: Align(
+                                          child: SizedBox(
+                                            width: 88 * fem,
+                                            height: 22 * fem,
+                                            child: Text(
+                                              'Liked Songs',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontFamily: 'Source Sans Pro',
+                                                fontSize: 17 * ffem,
+                                                fontWeight: FontWeight.w600,
+                                                height: 1.2575 * ffem / fem,
+                                                color: const Color(0xffffffff),
+                                              ),
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    // playlist107songsmfX (33:164)
-                                    left: 12 * fem,
-                                    top: 21 * fem,
-                                    child: Align(
-                                      child: SizedBox(
-                                        width: 90 * fem,
-                                        height: 14 * fem,
-                                        child: Text(
-                                          'Playlist - 107 songs',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontFamily: 'Source Sans Pro',
-                                            fontSize: 11 * ffem,
-                                            fontWeight: FontWeight.w600,
-                                            height: 1.2575 * ffem / fem,
-                                            color: const Color(0xff8c8989),
+                                      Positioned(
+                                        // playlist107songsmfX (33:164)
+                                        left: 12 * fem,
+                                        top: 21 * fem,
+                                        child: Align(
+                                          child: SizedBox(
+                                            width: 90 * fem,
+                                            height: 14 * fem,
+                                            child: Text(
+                                              'Playlist - 7 songs',
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontFamily: 'Source Sans Pro',
+                                                fontSize: 11 * ffem,
+                                                fontWeight: FontWeight.w600,
+                                                height: 1.2575 * ffem / fem,
+                                                color: const Color(0xff8c8989),
+                                              ),
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    // vectorPgu (35:116)
-                                    left: 0 * fem,
-                                    top: 24 * fem,
-                                    child: Align(
-                                      child: SizedBox(
-                                        width: 9 * fem,
-                                        height: 9 * fem,
-                                        child: const Icon(
-                                          Icons.push_pin_rounded,
-                                          size: 9,
-                                          color: Color(0x00e40a15),
+                                      Positioned(
+                                        // vectorPgu (35:116)
+                                        left: 0 * fem,
+                                        top: 24 * fem,
+                                        child: Align(
+                                          child: SizedBox(
+                                            width: 9 * fem,
+                                            height: 9 * fem,
+                                            child: const Icon(
+                                              Icons.push_pin_rounded,
+                                              size: 9,
+                                              color: Color(0x00e40a15),
+                                            ),
+                                          ),
                                         ),
                                       ),
-                                    ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
