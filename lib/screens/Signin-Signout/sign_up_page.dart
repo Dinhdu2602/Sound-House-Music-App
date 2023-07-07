@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
-import 'package:sound_house_app/screens/login_page.dart';
+import 'package:sound_house_app/screens/Signin-Signout/login_page.dart';
 import 'package:sound_house_app/widget/checkbox.dart';
 import 'package:sound_house_app/widget/sign_up_form.dart';
 
@@ -60,7 +60,10 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             const SizedBox(height: 20.0),
             OutlinedButton(
-              onPressed: () {},
+              onPressed: () {
+                () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const LoginPage()));
+              },
               style: OutlinedButton.styleFrom(
                 backgroundColor: Colors.black,
                 shape: RoundedRectangleBorder(

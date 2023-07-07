@@ -423,7 +423,7 @@ class LibraryBehaviorList extends StatelessWidget {
                           margin: EdgeInsets.fromLTRB(
                               0 * fem, 1 * fem, 73 * fem, 0 * fem),
                           child: Text(
-                            'Playlist - 107 songs',
+                            'Playlist - 7 songs',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: 'Source Sans Pro',

@@ -154,7 +154,7 @@ class SearchScreen extends StatelessWidget {
                                 margin: EdgeInsets.fromLTRB(
                                     0 * fem, 0 * fem, 94 * fem, 5 * fem),
                                 child: Text(
-                                  'Charts',
+                                  'Likes Song',
                                   style: TextStyle(
                                     fontFamily: 'Source Sans Pro',
                                     fontSize: 16 * ffem,

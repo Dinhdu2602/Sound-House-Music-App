@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sound_house_app/models/album.dart';
 import 'package:sound_house_app/models/artists.dart';
 import 'package:sound_house_app/models/packages.dart';
 import 'package:sound_house_app/models/songs.dart';
@@ -27,6 +28,7 @@ class _HomePageState extends State<HomePage> {
     List<SongModel> recent = recentProvider.recent;
     List<PackageModel> madeForYou = packages;
     List<PackageModel> popularHits = packages.reversed.toList();
+    List<AlbumModel> popularAlbum = albums;
     PackageProvider packageProvider = Provider.of<PackageProvider>(context);
     SongProvider songProvider = Provider.of<SongProvider>(context);
     return SingleChildScrollView(
@@ -174,6 +176,35 @@ class _HomePageState extends State<HomePage> {
                               child: SongPakageItem(
                                   image: 'package/${popularHits[index].image}',
                                   text: popularHits[index].name!),
+                            ))
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Column(
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              const HomePageTitle(text: 'Popular Album'),
+              const SizedBox(
+                height: 10,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                physics: const BouncingScrollPhysics(),
+                child: Row(
+                  children: [
+                    ...List.generate(
+                        popularAlbum.length,
+                        (index) => Padding(
+                              padding: index == 0
+                                  ? const EdgeInsets.only(left: 10, right: 10)
+                                  : const EdgeInsets.only(left: 10),
+                              child: SongPakageItem(
+                                  image: 'package/${popularAlbum[index].image}',
+                                  text: popularAlbum[index].name!),
                             ))
                   ],
                 ),

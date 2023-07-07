@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sound_house_app/screens/login_page.dart';
-import 'package:sound_house_app/screens/sign_up_page.dart';
+import 'package:sound_house_app/screens/Signin-Signout/login_page.dart';
+import 'package:sound_house_app/screens/Signin-Signout/sign_up_page.dart';
 
 class DashboardSignIn extends StatefulWidget {
   const DashboardSignIn({super.key});
@@ -42,13 +42,10 @@ class _DashboardSignInState extends State<DashboardSignIn> {
             ),
             const SizedBox(height: 40.0),
             ElevatedButton(
-              onPressed: () {
-                () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const LoginPage()));
-              },
+              onPressed: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const LoginPage())),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(
-                    0x00e40a15), // Replace with your desired sign-in button color
+                backgroundColor: Colors.red,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
@@ -66,12 +63,8 @@ class _DashboardSignInState extends State<DashboardSignIn> {
             ),
             const SizedBox(height: 10.0),
             OutlinedButton(
-              onPressed: () {
-                () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const SignUpPage()));
-              },
+              onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const SignUpPage())),
               style: OutlinedButton.styleFrom(
                 backgroundColor: Colors.black,
                 shape: RoundedRectangleBorder(

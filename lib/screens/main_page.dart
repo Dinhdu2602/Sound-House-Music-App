@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sound_house_app/screens/account_screen.dart';
 import 'package:sound_house_app/screens/home_page.dart';
-import 'package:sound_house_app/screens/library.dart';
+import 'package:sound_house_app/screens/library_screen/library.dart';
 import 'package:sound_house_app/screens/music_detail.dart';
 import 'package:sound_house_app/providers/page_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';

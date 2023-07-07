@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
-import 'package:sound_house_app/screens/login_page.dart';
+import 'package:sound_house_app/screens/Signin-Signout/login_page.dart';
 import 'package:sound_house_app/widget/reset_form.dart';
 
 class ResetPasswordScreen extends StatefulWidget {

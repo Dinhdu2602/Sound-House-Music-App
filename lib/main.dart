@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sound_house_app/screens/get_started_page.dart';
+import 'package:sound_house_app/screens/Signin-Signout/get_started_page.dart';
 import 'package:sound_house_app/providers/fav_provider.dart';
 import 'package:sound_house_app/providers/package_provider.dart';
 import 'package:sound_house_app/providers/page_provider.dart';

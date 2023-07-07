@@ -23,17 +23,11 @@ class _LoginFormState extends State<LoginForm> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5),
       child: TextFormField(
-        validator: (value) {
-              if (value!.isEmpty) {
-                return 'Please enter your email/password';
-              }
-              return null;
-            },
         obscureText: pass ? _isObscure : false,
         decoration: InputDecoration(
             labelText: label,
             labelStyle: const TextStyle(
-              color: Color(0xFF979797),
+              color: Colors.white,
             ),
             focusedBorder: const UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.white),

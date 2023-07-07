@@ -6,6 +6,7 @@ class ColorConstants {
   static Color primaryColor2 = hexToColor('#B30100');
   static Color cardBackGroundColor = hexToColor('#0E0E0F');
   static Color inputHintColor = hexToColor('#FFFFFF');
+  static Color primaryColor = hexToColor('#E40A15');
 }
 
 Color hexToColor(String hex) {
