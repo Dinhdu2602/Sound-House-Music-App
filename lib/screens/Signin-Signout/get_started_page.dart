@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
 import 'package:sound_house_app/screens/Signin-Signout/auth_page.dart';
 
-import 'dashboard_sign_in_page.dart';
 // import 'package:sound_house_app/screens/dashboard_sign_in_page.dart';
 
 class GetStartedPage extends StatefulWidget {
@@ -17,6 +16,7 @@ class _GetStartedPageState extends State<GetStartedPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
             decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/cover_page/getStarted.png'),

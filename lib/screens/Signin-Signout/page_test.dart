@@ -7,7 +7,15 @@ class PageTest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(child: Center(child: ElevatedButton(onPressed: ()async{await FirebaseAuth.instance.signOut();},child: Text("Sign out"),),)),
+      body: Container(
+          child: Center(
+        child: ElevatedButton(
+          onPressed: () async {
+            await FirebaseAuth.instance.signOut();
+          },
+          child: const Text("Sign out"),
+        ),
+      )),
     );
   }
 }

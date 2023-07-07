@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
-<<<<<<< Updated upstream
 import 'package:sound_house_app/screens/Signin-Signout/login_page.dart';
-=======
->>>>>>> Stashed changes
 import 'package:sound_house_app/widget/checkbox.dart';
 import 'package:sound_house_app/widget/sign_up_form.dart';
-
-import 'login_page.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -20,18 +15,6 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const LoginPage(),
-                ));
-          },
-        ),
-      ),
       body: Container(
         padding: const EdgeInsets.all(20.0),
         decoration: const BoxDecoration(
@@ -65,10 +48,8 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             const SizedBox(height: 20.0),
             OutlinedButton(
-              onPressed: () {
-                () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const LoginPage()));
-              },
+              onPressed: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const LoginPage())),
               style: OutlinedButton.styleFrom(
                 backgroundColor: Colors.black,
                 shape: RoundedRectangleBorder(
@@ -98,15 +79,14 @@ class _SignUpPageState extends State<SignUpPage> {
                   "Already have an account?",
                   style: TextStyle(
                     fontSize: 16.0,
+                    color: Colors.white,
                   ),
                 ),
                 TextButton(
-                  onPressed: () {
-                    () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginPage()));
-                  },
+                  onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginPage())),
                   child: Text(
                     'Sign in',
                     style: textButton.copyWith(

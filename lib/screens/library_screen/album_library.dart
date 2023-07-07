@@ -5,7 +5,6 @@ import 'package:sound_house_app/providers/fav_provider.dart';
 import 'package:sound_house_app/providers/recent_played_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
 import 'package:sound_house_app/screens/library_screen/library.dart';
-import 'package:sound_house_app/widget/music_item.dart';
 
 class AlbumLibraryScreen extends StatefulWidget {
   const AlbumLibraryScreen({super.key});
@@ -47,7 +46,7 @@ class _AlbumLibraryScreenState extends State<AlbumLibraryScreen> {
           ),
         ],
       ),
-      body: Column(
+      body: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Expanded(

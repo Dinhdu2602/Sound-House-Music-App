@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/models/album.dart';
 
-import '../models/album.dart';
-
 class AlbumProvider with ChangeNotifier {
   AlbumModel? _currentAlbum;
   AlbumModel? get currentAlbum => _currentAlbum;
@@ -27,5 +25,3 @@ class AlbumProvider with ChangeNotifier {
     return tracks;
   }
 }
-
-

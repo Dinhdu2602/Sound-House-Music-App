@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
-<<<<<<< Updated upstream
 import 'package:sound_house_app/screens/Signin-Signout/login_page.dart';
-=======
->>>>>>> Stashed changes
 import 'package:sound_house_app/widget/reset_form.dart';
-
-import 'login_page.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
   const ResetPasswordScreen({super.key});
@@ -19,18 +14,6 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new),
-          onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const LoginPage(),
-                ));
-          },
-        ),
-      ),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(

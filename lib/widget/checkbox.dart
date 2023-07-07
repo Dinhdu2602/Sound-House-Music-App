@@ -44,7 +44,12 @@ class _CheckBoxState extends State<CheckBox> {
             const SizedBox(
               width: 12,
             ),
-            Text(widget.text),
+            Text(
+              widget.text,
+              style: const TextStyle(
+                color: Colors.white,
+              ),
+            ),
           ],
         )
       ],
