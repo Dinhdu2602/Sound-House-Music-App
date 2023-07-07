@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
-import 'package:sound_house_app/screens/Signin-Signout/dashboard_sign_in_page.dart';
-import 'package:sound_house_app/screens/Signin-Signout/reset_password_page.dart';
-import 'package:sound_house_app/screens/Signin-Signout/sign_up_page.dart';
-import 'package:sound_house_app/screens/home_page.dart';
+import 'package:sound_house_app/screens/dashboard_sign_in_page.dart';
+import 'package:sound_house_app/screens/reset_password_page.dart';
+import 'package:sound_house_app/screens/sign_up_page.dart';
 import 'package:sound_house_app/widget/login_form.dart';
 
 class LoginPage extends StatefulWidget {
@@ -17,11 +16,17 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
-      floatingActionButton: IconButton(
-        icon: const Icon(Icons.arrow_back_ios_new, color: Colors.white),
-        onPressed: () => Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const DashboardSignIn())),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new),
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DashboardSignIn(),
+                ));
+          },
+        ),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -38,8 +43,7 @@ class _LoginPageState extends State<LoginPage> {
             const Text(
               'Hello, Sign In',
               style: TextStyle(
-                color: Colors.white,
-                fontSize: 30.0,
+                fontSize: 24.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -47,10 +51,12 @@ class _LoginPageState extends State<LoginPage> {
             const LoginForm(),
             const SizedBox(height: 10.0),
             TextButton(
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ResetPasswordScreen())),
+              onPressed: () {
+                () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ResetPasswordScreen()));
+              },
               child: const Text(
                 'Forgot password?',
                 style: TextStyle(
@@ -63,8 +69,9 @@ class _LoginPageState extends State<LoginPage> {
             ),
             const SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const HomePage())),
+              onPressed: () {
+                // Handle "Sign in" button press
+              },
               child: const Text('Sign in'),
             ),
             const SizedBox(height: 20.0),
@@ -78,10 +85,12 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 TextButton(
-                  onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SignUpPage())),
+                  onPressed: () {
+                    () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignUpPage()));
+                  },
                   child: Text(
                     'Sign up',
                     style: textButton.copyWith(

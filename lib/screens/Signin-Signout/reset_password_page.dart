@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
+<<<<<<< Updated upstream
 import 'package:sound_house_app/screens/Signin-Signout/login_page.dart';
+=======
+>>>>>>> Stashed changes
 import 'package:sound_house_app/widget/reset_form.dart';
+
+import 'login_page.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
   const ResetPasswordScreen({super.key});
