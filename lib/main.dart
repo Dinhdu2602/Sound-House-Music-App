@@ -6,7 +6,7 @@ import 'package:sound_house_app/providers/package_provider.dart';
 import 'package:sound_house_app/providers/page_provider.dart';
 import 'package:sound_house_app/providers/recent_played_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
-import 'package:sound_house_app/screens/home_page.dart';
+import 'package:sound_house_app/screens/account_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,10 +31,12 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
+          primaryColor: Colors.blue.shade400,
+          dividerColor: Colors.red[800],
           fontFamily: 'Poppins',
         ),
         debugShowCheckedModeBanner: false,
-        home: const HomePage(),
+        home: const AccountScreen(),
       ),
     );
   }

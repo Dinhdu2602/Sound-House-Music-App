@@ -31,187 +31,194 @@ class _HomePageState extends State<HomePage> {
     List<AlbumModel> popularAlbum = albums;
     PackageProvider packageProvider = Provider.of<PackageProvider>(context);
     SongProvider songProvider = Provider.of<SongProvider>(context);
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      physics: const BouncingScrollPhysics(),
-      child: Column(
-        children: [
-          const HomePageHeader(),
-          Column(
-            children: [
-              const SizedBox(height: 20),
-              const HomePageTitle(text: 'Your Favorite artist'),
-              const SizedBox(height: 10),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                physics: const BouncingScrollPhysics(),
-                child: Row(
-                  children: [
-                    ...List.generate(
-                        listArtists.length,
-                        (index) => Padding(
-                              padding: index == 0
-                                  ? const EdgeInsets.only(left: 10, right: 10)
-                                  : const EdgeInsets.only(right: 10),
-                              child: FavArtistItem(
-                                artist: listArtists[index],
-                              ),
-                            ))
-                  ],
+    return Material(
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          children: [
+            const HomePageHeader(),
+            Column(
+              children: [
+                const SizedBox(height: 20),
+                const HomePageTitle(text: 'Your Favorite artist'),
+                const SizedBox(height: 10),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  child: Row(
+                    children: [
+                      ...List.generate(
+                          listArtists.length,
+                          (index) => Padding(
+                                padding: index == 0
+                                    ? const EdgeInsets.only(left: 10, right: 10)
+                                    : const EdgeInsets.only(right: 10),
+                                child: FavArtistItem(
+                                  artist: listArtists[index],
+                                ),
+                              ))
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-          recent.isNotEmpty
-              ? Column(
-                  children: [
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    const HomePageTitle(text: 'Recent Played'),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    SizedBox(
-                      width: double.infinity,
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        physics: const BouncingScrollPhysics(),
-                        child: Row(
-                          children: [
-                            ...List.generate(
-                                recent.length,
-                                (index) => Padding(
-                                      padding: index == 0
-                                          ? const EdgeInsets.only(
-                                              left: 10, right: 10)
-                                          : const EdgeInsets.only(left: 10),
-                                      child: GestureDetector(
-                                        onTap: () {
-                                          songProvider.currentSong =
-                                              recent[index];
-                                          packageProvider.currentPackage = null;
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const MusicDetail(),
-                                            ),
-                                          );
-                                        },
-                                        child: SongPakageItem(
-                                            image:
-                                                'cover/${recent[index].image}',
-                                            text: recent[index].title!),
-                                      ),
-                                    ))
-                          ],
+              ],
+            ),
+            recent.isNotEmpty
+                ? Column(
+                    children: [
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      const HomePageTitle(text: 'Recent Played'),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      SizedBox(
+                        width: double.infinity,
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          physics: const BouncingScrollPhysics(),
+                          child: Row(
+                            children: [
+                              ...List.generate(
+                                  recent.length,
+                                  (index) => Padding(
+                                        padding: index == 0
+                                            ? const EdgeInsets.only(
+                                                left: 10, right: 10)
+                                            : const EdgeInsets.only(left: 10),
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            songProvider.currentSong =
+                                                recent[index];
+                                            packageProvider.currentPackage =
+                                                null;
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const MusicDetail(),
+                                              ),
+                                            );
+                                          },
+                                          child: SongPakageItem(
+                                              image:
+                                                  'cover/${recent[index].image}',
+                                              text: recent[index].title!),
+                                        ),
+                                      ))
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                )
-              : Container(),
-          Column(
-            children: [
-              const SizedBox(
-                height: 20,
-              ),
-              const HomePageTitle(text: 'Made for you'),
-              const SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                physics: const BouncingScrollPhysics(),
-                child: Row(
-                  children: [
-                    ...List.generate(
-                        madeForYou.length,
-                        (index) => Padding(
-                              padding: index == 0
-                                  ? const EdgeInsets.only(left: 10, right: 10)
-                                  : const EdgeInsets.only(left: 10),
-                              child: GestureDetector(
-                                onTap: () {
-                                  packageProvider.currentPackage =
-                                      madeForYou[index];
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const PackagePage(),
-                                    ),
-                                  );
-                                },
+                    ],
+                  )
+                : Container(),
+            Column(
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                const HomePageTitle(text: 'Made for you'),
+                const SizedBox(
+                  height: 10,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  child: Row(
+                    children: [
+                      ...List.generate(
+                          madeForYou.length,
+                          (index) => Padding(
+                                padding: index == 0
+                                    ? const EdgeInsets.only(left: 10, right: 10)
+                                    : const EdgeInsets.only(left: 10),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    packageProvider.currentPackage =
+                                        madeForYou[index];
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const PackagePage(),
+                                      ),
+                                    );
+                                  },
+                                  child: SongPakageItem(
+                                      image:
+                                          'package/${madeForYou[index].image}',
+                                      text: madeForYou[index].name!),
+                                ),
+                              ))
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                const HomePageTitle(text: 'Popular Hits'),
+                const SizedBox(
+                  height: 10,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  child: Row(
+                    children: [
+                      ...List.generate(
+                          popularHits.length,
+                          (index) => Padding(
+                                padding: index == 0
+                                    ? const EdgeInsets.only(left: 10, right: 10)
+                                    : const EdgeInsets.only(left: 10),
                                 child: SongPakageItem(
-                                    image: 'package/${madeForYou[index].image}',
-                                    text: madeForYou[index].name!),
-                              ),
-                            ))
-                  ],
+                                    image:
+                                        'package/${popularHits[index].image}',
+                                    text: popularHits[index].name!),
+                              ))
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-          Column(
-            children: [
-              const SizedBox(
-                height: 20,
-              ),
-              const HomePageTitle(text: 'Popular Hits'),
-              const SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                physics: const BouncingScrollPhysics(),
-                child: Row(
-                  children: [
-                    ...List.generate(
-                        popularHits.length,
-                        (index) => Padding(
-                              padding: index == 0
-                                  ? const EdgeInsets.only(left: 10, right: 10)
-                                  : const EdgeInsets.only(left: 10),
-                              child: SongPakageItem(
-                                  image: 'package/${popularHits[index].image}',
-                                  text: popularHits[index].name!),
-                            ))
-                  ],
+              ],
+            ),
+            Column(
+              children: [
+                const SizedBox(
+                  height: 20,
                 ),
-              ),
-            ],
-          ),
-          Column(
-            children: [
-              const SizedBox(
-                height: 20,
-              ),
-              const HomePageTitle(text: 'Popular Album'),
-              const SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                physics: const BouncingScrollPhysics(),
-                child: Row(
-                  children: [
-                    ...List.generate(
-                        popularAlbum.length,
-                        (index) => Padding(
-                              padding: index == 0
-                                  ? const EdgeInsets.only(left: 10, right: 10)
-                                  : const EdgeInsets.only(left: 10),
-                              child: SongPakageItem(
-                                  image: 'package/${popularAlbum[index].image}',
-                                  text: popularAlbum[index].name!),
-                            ))
-                  ],
+                const HomePageTitle(text: 'Popular Album'),
+                const SizedBox(
+                  height: 10,
                 ),
-              ),
-            ],
-          ),
-        ],
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  child: Row(
+                    children: [
+                      ...List.generate(
+                          popularAlbum.length,
+                          (index) => Padding(
+                                padding: index == 0
+                                    ? const EdgeInsets.only(left: 10, right: 10)
+                                    : const EdgeInsets.only(left: 10),
+                                child: SongPakageItem(
+                                    image:
+                                        'package/${popularAlbum[index].image}',
+                                    text: popularAlbum[index].name!),
+                              ))
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
