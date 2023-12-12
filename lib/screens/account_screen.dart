@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/models/user.dart';
+import 'package:sound_house_app/screens/edit_profile_screen.dart';
 import 'package:sound_house_app/utils/user_preferences.dart';
 import 'package:sound_house_app/widget/account_appbar.dart';
 import 'package:sound_house_app/widget/account_button.dart';
@@ -20,11 +21,15 @@ class _AccountScreenState extends State<AccountScreen> {
     return Scaffold(
         appBar: buildAppBar(context),
         body: ListView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           children: [
             ProfileWidget(
               imagePath: user.imagePath,
-              onClicked: () async {},
+              onClicked: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => EditProfileScreen()),
+                );
+              },
             ),
             const SizedBox(height: 24),
             buildName(user),
@@ -56,18 +61,18 @@ class _AccountScreenState extends State<AccountScreen> {
         onClicked: () {},
       );
   Widget buildAbout(User user) => Container(
-        padding: EdgeInsets.symmetric(horizontal: 48),
+        padding: const EdgeInsets.symmetric(horizontal: 48),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               'About',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
             Text(
               user.about,
-              style: TextStyle(fontSize: 16, height: 1.4),
+              style: const TextStyle(fontSize: 16, height: 1.4),
             ),
           ],
         ),
