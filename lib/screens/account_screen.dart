@@ -1,3 +1,4 @@
+import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/models/user.dart';
 import 'package:sound_house_app/screens/edit_profile_screen.dart';
@@ -18,28 +19,34 @@ class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
     const user = UserPreferences.myUser;
-    return Scaffold(
-        appBar: buildAppBar(context),
-        body: ListView(
-          physics: const BouncingScrollPhysics(),
-          children: [
-            ProfileWidget(
-              imagePath: user.imagePath,
-              onClicked: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => EditProfileScreen()),
-                );
-              },
-            ),
-            const SizedBox(height: 24),
-            buildName(user),
-            const SizedBox(height: 24),
-            Center(child: buildUpgradeButton()),
-            const NumbersWidget(),
-            const SizedBox(height: 48),
-            buildAbout(user),
-          ],
-        ));
+    return ThemeSwitchingArea(
+      child: Builder(
+        builder: (context) => Scaffold(
+          appBar: buildAppBar(context),
+          body: ListView(
+            physics: const BouncingScrollPhysics(),
+            children: [
+              ProfileWidget(
+                imagePath: user.imagePath,
+                onClicked: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => const EditProfileScreen()),
+                  );
+                },
+              ),
+              const SizedBox(height: 24),
+              buildName(user),
+              const SizedBox(height: 24),
+              Center(child: buildUpgradeButton()),
+              const NumbersWidget(),
+              const SizedBox(height: 48),
+              buildAbout(user),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   Widget buildName(User user) => Column(

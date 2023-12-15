@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    final user = UserPreferences.myUser;
+    const user = UserPreferences.myUser;
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => PageProvider()),
