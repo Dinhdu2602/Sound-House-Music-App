@@ -13,35 +13,9 @@ class LibraryScreen extends StatelessWidget {
     double ffem = fem * 0.97;
     return SizedBox(
       width: double.infinity,
-      child: Container(
+      child: SizedBox(
         // library9AR (30:198)
         width: double.infinity,
-        decoration: BoxDecoration(
-          color: const Color(0xff121111),
-          borderRadius: BorderRadius.circular(40 * fem),
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-          ],
-        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -143,7 +117,7 @@ class LibraryScreen extends StatelessWidget {
                           child: const Icon(
                             Icons.add,
                             size: 15,
-                            color: Color(0x00e40a15),
+                            color: Color(0xffe40a15),
                           ),
                         ),
                       ],

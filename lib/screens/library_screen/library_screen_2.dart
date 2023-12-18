@@ -11,35 +11,9 @@ class LibraryBehaviorList extends StatelessWidget {
     double ffem = fem * 0.97;
     return SizedBox(
       width: double.infinity,
-      child: Container(
+      child: SizedBox(
         // librarytemplate2oq3 (35:169)
         width: double.infinity,
-        decoration: BoxDecoration(
-          color: const Color(0xff121111),
-          borderRadius: BorderRadius.circular(40 * fem),
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-          ],
-        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
