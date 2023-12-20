@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class WelcomeTitle extends StatelessWidget {
-  const WelcomeTitle({
+class MoreTitle extends StatelessWidget {
+  const MoreTitle({
     Key? key,
     required this.title,
   }) : super(key: key);
@@ -19,9 +19,19 @@ class WelcomeTitle extends StatelessWidget {
                 fontSize: 24,
                 fontWeight: FontWeight.w700,
                 fontStyle: FontStyle.normal)),
+        const SizedBox(
+          width: 64,
+        ),
         IconButton(
           icon: const Icon(
-            Icons.more_vert,
+            Icons.search,
+            color: Colors.white,
+          ),
+          onPressed: () {},
+        ),
+        IconButton(
+          icon: const Icon(
+            Icons.person_sharp,
             color: Colors.white,
           ),
           onPressed: () {},
