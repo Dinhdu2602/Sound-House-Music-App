@@ -6,7 +6,6 @@ class ColorConstants {
   static Color primaryColor2 = hexToColor('#B30100');
   static Color cardBackGroundColor = hexToColor('#0E0E0F');
   static Color inputHintColor = hexToColor('#FFFFFF');
-  static Color primaryColor = hexToColor('#E40A15');
 }
 
 Color hexToColor(String hex) {
@@ -29,7 +28,7 @@ TextStyle subTitle = const TextStyle(
 
 class MyThemes {
   static const primary = Colors.red;
-  static final primaryColor = Colors.blue.shade300;
+  static final primaryColor = Colors.red.shade300;
 
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: Colors.grey.shade900,
