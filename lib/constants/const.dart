@@ -14,3 +14,14 @@ String formatTime(Duration duration) {
   String twoDigitSeconds = twoDigits(duration.inSeconds.remainder(60));
   return "$twoDigitMinutes:$twoDigitSeconds";
 }
+
+class Palette {
+  static const MaterialColor primaryColor =
+      MaterialColor(0xFFE40A15, <int, Color>{});
+
+  static const MaterialColor secondaryColor =
+      MaterialColor(0xFF121212, <int, Color>{});
+
+  static const MaterialColor secondarySwatchColor =
+      MaterialColor(0xFF2A2A2A, <int, Color>{});
+}

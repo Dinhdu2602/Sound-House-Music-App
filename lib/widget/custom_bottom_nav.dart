@@ -14,7 +14,7 @@ class CustomBottomNAv extends StatelessWidget {
     return Container(
         height: 60,
         decoration: const BoxDecoration(
-            border: Border(top: BorderSide(color: Color(0x00e40a15)))),
+            border: Border(top: BorderSide(color: Color(0xffe40a15)))),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: List.generate(
@@ -34,14 +34,14 @@ class CustomBottomNAv extends StatelessWidget {
                             height: 3,
                             decoration: BoxDecoration(
                                 color: pageProvider.currentPage == index
-                                    ? const Color(0x00e40a15)
+                                    ? const Color(0xffe40a15)
                                     : Colors.white,
                                 borderRadius: BorderRadius.circular(5)),
                           ),
                           Icon(
                             icons[index],
                             color: pageProvider.currentPage == index
-                                ? const Color(0x00e40a15)
+                                ? const Color(0xffe40a15)
                                 : Colors.white,
                           ),
                         ],

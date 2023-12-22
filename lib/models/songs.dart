@@ -19,8 +19,8 @@ List<SongModel> listSongs = [
       singer: 'Adele',
       title: 'Easy On Me',
       songUrl: 'Adele-EasyOnMe(OfficialLyricVideo).mp3',
-      image: 'Adele - Easy On Me (OfficialLyricVideo).jpg',
-      lyric: 'Adele - Easy On Me (OfficialLyricVideo).lrc',
+      image: 'Adele - Easy On Me (Official Lyric Video).jpg',
+      lyric: 'Adele - Easy On Me (Official Lyric Video).lrc',
       likes: [
         'user1',
         'user2',

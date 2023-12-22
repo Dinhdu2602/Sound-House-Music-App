@@ -132,7 +132,7 @@ class _PackagePageState extends State<PackagePage> {
                                   padding: const EdgeInsets.all(5),
                                   decoration: const BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Color(0x00e40a15)),
+                                      color: Color(0xffe40a15)),
                                   child: const Icon(
                                     Icons.play_arrow_rounded,
                                     size: 52,

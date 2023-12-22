@@ -4,8 +4,8 @@ import 'package:sound_house_app/screens/library_screen/widget/more_title.dart';
 import 'package:sound_house_app/screens/library_screen/widget/playlist_card.dart';
 import 'package:sound_house_app/widget/custom_title.dart';
 
-class MorePage extends StatelessWidget {
-  const MorePage({super.key});
+class LibraryPage extends StatelessWidget {
+  const LibraryPage({super.key});
 
   @override
   Widget build(BuildContext context) {

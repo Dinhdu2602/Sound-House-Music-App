@@ -52,7 +52,7 @@ List<AlbumModel> albums = [
   AlbumModel(
     idAlbum: 'idAlbum4',
     name: 'V-pop Hits',
-    image: 'iamge 10.png',
+    image: 'image 10.png',
     songs: [
       listSongs[1],
       listSongs[0],

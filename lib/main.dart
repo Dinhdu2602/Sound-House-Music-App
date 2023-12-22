@@ -8,8 +8,7 @@ import 'package:sound_house_app/providers/package_provider.dart';
 import 'package:sound_house_app/providers/page_provider.dart';
 import 'package:sound_house_app/providers/recent_played_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
-import 'package:sound_house_app/screens/account_screen.dart';
-import 'package:sound_house_app/screens/edit_profile_screen.dart';
+import 'package:sound_house_app/screens/Signin-Signout/get_started_page.dart';
 import 'package:sound_house_app/utils/user_preferences.dart';
 
 Future<void> main() async {
@@ -40,7 +39,7 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             theme: user.isDarkMode ? MyThemes.darkTheme : MyThemes.lightTheme,
             debugShowCheckedModeBanner: false,
-            home: const AccountScreen(),
+            home: const GetStartedPage(),
           ),
         ),
       ),

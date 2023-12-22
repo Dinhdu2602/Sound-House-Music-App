@@ -47,19 +47,21 @@ class SongProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  final audioPlayer = AudioPlayer();
+  final AudioPlayer audioPlayer = AudioPlayer();
   setAudio(String song) async {
     audioPlayer.setReleaseMode(ReleaseMode.stop);
     final player = AudioCache(prefix: 'assets/song/');
     final url = await player.load(song);
-    audioPlayer.setSourceUrl(url.path);
+    await audioPlayer.setSourceUrl(url.path);
     audioPlayer.play(url.path as Source);
     audioPlayer.onPlayerStateChanged.listen((event) {
       isPlaying = event == PlayerState.playing;
     });
+
     audioPlayer.onDurationChanged.listen((event) {
       maxValue = event.inMilliseconds.toDouble();
     });
+
     audioPlayer.onPositionChanged.listen((event) {
       playProgress = event.inMilliseconds.toDouble();
     });

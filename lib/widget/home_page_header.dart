@@ -18,14 +18,14 @@ class HomePageHeader extends StatelessWidget {
               children: [
                 Text(
                   'SOUND HOUSE',
-                  style: TextStyle(color: Color(0x00e40a15), fontSize: 18),
+                  style: TextStyle(color: Color(0xffe40a15), fontSize: 18),
                 ),
                 SizedBox(
                   height: 10,
                 ),
                 Text(
                   'Let\'s listen to something cool today',
-                  style: TextStyle(color: Colors.white, fontSize: 12),
+                  style: TextStyle(color: Color(0xffe40a15), fontSize: 12),
                 ),
               ],
             ),
@@ -33,7 +33,7 @@ class HomePageHeader extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(5),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.3),
+              color: Colors.grey.withOpacity(0.3),
               shape: BoxShape.circle,
             ),
             child: Stack(
@@ -47,7 +47,7 @@ class HomePageHeader extends StatelessWidget {
                         ));
                   },
                   icon: const Icon(Icons.notifications_outlined),
-                  color: Colors.white,
+                  color: const Color(0xffe40a15),
                 ),
                 Positioned(
                   top: 5,
@@ -56,7 +56,7 @@ class HomePageHeader extends StatelessWidget {
                     width: 7,
                     height: 7,
                     decoration: const BoxDecoration(
-                      color: Color(0x00e40a15),
+                      color: Color(0xffe40a15),
                       shape: BoxShape.circle,
                     ),
                   ),

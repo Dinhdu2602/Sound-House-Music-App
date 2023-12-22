@@ -9,6 +9,7 @@ import 'package:sound_house_app/screens/package_page.dart';
 import 'package:sound_house_app/providers/package_provider.dart';
 import 'package:sound_house_app/providers/recent_played_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
+import 'package:sound_house_app/screens/what_news.dart';
 import 'package:sound_house_app/widget/fav_artist_item.dart';
 import 'package:sound_house_app/widget/home_page_header.dart';
 import 'package:sound_house_app/widget/home_page_title.dart';
@@ -31,14 +32,52 @@ class _HomePageState extends State<HomePage> {
     List<AlbumModel> popularAlbum = albums;
     PackageProvider packageProvider = Provider.of<PackageProvider>(context);
     SongProvider songProvider = Provider.of<SongProvider>(context);
-    return Material(
-      child: SingleChildScrollView(
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const WhatNews(),
+                  ));
+            },
+            icon: const Badge(
+              child: Icon(Icons.notifications_outlined),
+            ),
+            color: const Color(0xffe40a15),
+          )
+        ],
+        title: const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'SOUND HOUSE',
+              style: TextStyle(color: Color(0xffe40a15), fontSize: 18),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              'Let\'s listen to something cool today',
+              style: TextStyle(color: Color(0xffe40a15), fontSize: 12),
+            ),
+          ],
+        ),
+      ),
+      body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
-            const HomePageHeader(),
+            // const HomePageHeader(),
             Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(height: 20),
                 const HomePageTitle(text: 'Your Favorite artist'),
@@ -65,6 +104,7 @@ class _HomePageState extends State<HomePage> {
             ),
             recent.isNotEmpty
                 ? Column(
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       const SizedBox(
                         height: 20,
@@ -115,6 +155,7 @@ class _HomePageState extends State<HomePage> {
                   )
                 : Container(),
             Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(
                   height: 20,
@@ -158,6 +199,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(
                   height: 20,
@@ -188,6 +230,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(
                   height: 20,
