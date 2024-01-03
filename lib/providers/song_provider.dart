@@ -9,11 +9,12 @@ class SongProvider with ChangeNotifier {
   SongModel? _currentSong;
   SongModel? get currentSong => _currentSong;
   String? lyric;
+  bool _isPlaying = false;
   double? playProgress = 0, maxValue = 1;
   set currentSong(SongModel? current) {
     _currentSong = current;
     getLyric(current!.lyric);
-    setAudio(current.lyric!);
+    setAudio(current.songUrl!);
     notifyListeners();
   }
 
@@ -25,7 +26,6 @@ class SongProvider with ChangeNotifier {
     }
   }
 
-  bool _isPlaying = false;
   bool get isPlaying => _isPlaying;
   set isPlaying(bool isPlaying) {
     _isPlaying = isPlaying;
@@ -47,21 +47,19 @@ class SongProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  final AudioPlayer audioPlayer = AudioPlayer();
+  final audioPlayer = AudioPlayer();
   setAudio(String song) async {
     audioPlayer.setReleaseMode(ReleaseMode.stop);
     final player = AudioCache(prefix: 'assets/song/');
     final url = await player.load(song);
-    await audioPlayer.setSourceUrl(url.path);
-    audioPlayer.play(url.path as Source);
+    audioPlayer.setSourceUrl(url.path);
+    audioPlayer.play(AssetSource(url.path));
     audioPlayer.onPlayerStateChanged.listen((event) {
       isPlaying = event == PlayerState.playing;
     });
-
     audioPlayer.onDurationChanged.listen((event) {
       maxValue = event.inMilliseconds.toDouble();
     });
-
     audioPlayer.onPositionChanged.listen((event) {
       playProgress = event.inMilliseconds.toDouble();
     });

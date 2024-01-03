@@ -3,6 +3,7 @@ import 'package:sound_house_app/constants/theme.dart';
 import 'package:sound_house_app/screens/Signin-Signout/reset_password_page.dart';
 import 'package:sound_house_app/screens/Signin-Signout/sign_up_page.dart';
 import 'package:sound_house_app/screens/home_page.dart';
+import 'package:sound_house_app/screens/main_page.dart';
 import 'package:sound_house_app/widget/login_form.dart';
 
 class LoginPage extends StatefulWidget {
@@ -56,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             ElevatedButton(
               onPressed: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const HomePage())),
+                  MaterialPageRoute(builder: (context) => const MainPage())),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors
                     .red, // Replace with your desired sign-in button color

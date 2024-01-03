@@ -23,28 +23,30 @@ class _LoginFormState extends State<LoginForm> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5),
       child: TextFormField(
+        style: TextStyle(color: Colors.white),
         obscureText: pass ? _isObscure : false,
         decoration: InputDecoration(
-            labelText: label,
-            labelStyle: const TextStyle(
-              color: Colors.white,
-            ),
-            focusedBorder: const UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
-            ),
-            suffixIcon: pass
-                ? IconButton(
-                    onPressed: () {
-                      setState(() {
-                        _isObscure = !_isObscure;
-                      });
-                    },
-                    icon: Icon(
-                      _isObscure ? Icons.visibility_off : Icons.visibility,
-                      color: Colors.white,
-                    ),
-                  )
-                : null),
+          labelText: label,
+          labelStyle: const TextStyle(
+            color: Colors.white,
+          ),
+          focusedBorder: const UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.white),
+          ),
+          suffixIcon: pass
+              ? IconButton(
+                  onPressed: () {
+                    setState(() {
+                      _isObscure = !_isObscure;
+                    });
+                  },
+                  icon: Icon(
+                    _isObscure ? Icons.visibility_off : Icons.visibility,
+                    color: Colors.white,
+                  ),
+                )
+              : null,
+        ),
       ),
     );
   }

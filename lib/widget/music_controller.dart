@@ -37,7 +37,7 @@ class MusicController extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          songProvider.currentSong!.title!,
+                          'AAA', //songProvider.currentSong!.title!,
                           style: const TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -45,7 +45,7 @@ class MusicController extends StatelessWidget {
                         ),
                         const SizedBox(height: 5),
                         Text(
-                          songProvider.currentSong!.singer!,
+                          'Son Tung', //songProvider.currentSong!.singer!,
                           style: const TextStyle(
                               color: Colors.white, fontSize: 12),
                         ),
@@ -54,17 +54,18 @@ class MusicController extends StatelessWidget {
                   ),
                   IconButton(
                       onPressed: () {
-                        favProvider.setFav(songProvider.currentSong!);
+                        //favProvider.setFav(songProvider.currentSong!);
                       },
-                      icon: favProvider.isFavorite(songProvider.currentSong!)
-                          ? const Icon(
-                              Icons.favorite,
-                              color: Color(0x00e40a15),
-                            )
-                          : const Icon(
-                              Icons.favorite_border_rounded,
-                              color: Colors.white,
-                            )),
+                      icon:
+                          true //favProvider.isFavorite(songProvider.currentSong!)
+                              ? const Icon(
+                                  Icons.favorite,
+                                  color: Color(0xffe40a15),
+                                )
+                              : const Icon(
+                                  Icons.favorite_border_rounded,
+                                  color: Colors.white,
+                                )),
                 ],
               ),
             ),

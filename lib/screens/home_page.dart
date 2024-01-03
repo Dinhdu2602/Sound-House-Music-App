@@ -11,7 +11,6 @@ import 'package:sound_house_app/providers/recent_played_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
 import 'package:sound_house_app/screens/what_news.dart';
 import 'package:sound_house_app/widget/fav_artist_item.dart';
-import 'package:sound_house_app/widget/home_page_header.dart';
 import 'package:sound_house_app/widget/home_page_title.dart';
 import 'package:sound_house_app/widget/song_package_item.dart';
 

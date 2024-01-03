@@ -24,6 +24,7 @@ class CustomBottomNAv extends StatelessWidget {
                       pageProvider.currentPage = index;
                     },
                     child: SizedBox(
+                      width: 40,
                       height: 40,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,

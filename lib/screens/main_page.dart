@@ -56,7 +56,7 @@ class _MainPageState extends State<MainPage> {
               Image.asset(
                 songProvider.currentSong != null
                     ? 'assets/cover/${songProvider.currentSong!.image!}'
-                    : 'Adele - Easy On Me (Official Lyric Video).jpg',
+                    : 'assets/cover/Adele - Easy On Me (Official Lyric Video).jpg',
                 fit: BoxFit.cover,
                 width: double.infinity,
               ),
