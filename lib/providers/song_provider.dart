@@ -9,7 +9,6 @@ class SongProvider with ChangeNotifier {
   SongModel? _currentSong;
   SongModel? get currentSong => _currentSong;
   String? lyric;
-  bool _isPlaying = false;
   double? playProgress = 0, maxValue = 1;
   set currentSong(SongModel? current) {
     _currentSong = current;
@@ -26,6 +25,7 @@ class SongProvider with ChangeNotifier {
     }
   }
 
+  bool _isPlaying = false;
   bool get isPlaying => _isPlaying;
   set isPlaying(bool isPlaying) {
     _isPlaying = isPlaying;

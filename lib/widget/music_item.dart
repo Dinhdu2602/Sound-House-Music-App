@@ -38,7 +38,7 @@ class MusicItem extends StatelessWidget {
                   height: 40,
                   width: 40,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(7),
                       image: DecorationImage(
                           image: AssetImage('assets/cover/${data.image}'),
                           fit: BoxFit.cover)),
@@ -79,7 +79,7 @@ class MusicItem extends StatelessWidget {
               icon: favProvider.isFavorite(data)
                   ? const Icon(
                       Icons.favorite,
-                      color: Color(0x00e40a15),
+                      color: Color(0xffe40a15),
                     )
                   : const Icon(
                       Icons.favorite_border_rounded,

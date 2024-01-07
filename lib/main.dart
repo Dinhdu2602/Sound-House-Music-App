@@ -9,6 +9,7 @@ import 'package:sound_house_app/providers/page_provider.dart';
 import 'package:sound_house_app/providers/recent_played_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
 import 'package:sound_house_app/screens/Signin-Signout/get_started_page.dart';
+import 'package:sound_house_app/screens/music_detail.dart';
 import 'package:sound_house_app/utils/user_preferences.dart';
 
 Future<void> main() async {

@@ -18,8 +18,7 @@ class SongLyric extends StatelessWidget {
       height: MediaQuery.of(context).size.height / 6,
       child: LyricsReader(
         model: LyricsModelBuilder.create()
-            .bindLyricToMain(
-                /*songProvider.lyric!*/ 'assets/lyric/Adele - Easy On Me (Official Lyric Video).lrc')
+            .bindLyricToMain(songProvider.lyric!)
             .getModel(),
         position: songProvider.playProgress!.toInt(),
         lyricUi: lyricUI,

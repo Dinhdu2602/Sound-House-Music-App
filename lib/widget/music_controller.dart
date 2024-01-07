@@ -37,7 +37,7 @@ class MusicController extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'AAA', //songProvider.currentSong!.title!,
+                          songProvider.currentSong!.title!,
                           style: const TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -45,7 +45,7 @@ class MusicController extends StatelessWidget {
                         ),
                         const SizedBox(height: 5),
                         Text(
-                          'Son Tung', //songProvider.currentSong!.singer!,
+                          songProvider.currentSong!.singer!,
                           style: const TextStyle(
                               color: Colors.white, fontSize: 12),
                         ),
@@ -54,18 +54,17 @@ class MusicController extends StatelessWidget {
                   ),
                   IconButton(
                       onPressed: () {
-                        //favProvider.setFav(songProvider.currentSong!);
+                        favProvider.setFav(songProvider.currentSong!);
                       },
-                      icon:
-                          true //favProvider.isFavorite(songProvider.currentSong!)
-                              ? const Icon(
-                                  Icons.favorite,
-                                  color: Color(0xffe40a15),
-                                )
-                              : const Icon(
-                                  Icons.favorite_border_rounded,
-                                  color: Colors.white,
-                                )),
+                      icon: favProvider.isFavorite(songProvider.currentSong!)
+                          ? const Icon(
+                              Icons.favorite,
+                              color: Color(0xffe40a15),
+                            )
+                          : const Icon(
+                              Icons.favorite_border_rounded,
+                              color: Colors.white,
+                            )),
                 ],
               ),
             ),
@@ -83,7 +82,7 @@ class MusicController extends StatelessWidget {
                 songProvider.audioPlayer.resume();
               },
               onChangeEnd: (value) {},
-              activeColor: const Color(0x00e40a15),
+              activeColor: const Color(0xffe40a15),
               inactiveColor: Colors.white,
             ),
             Padding(
@@ -131,7 +130,7 @@ class MusicController extends StatelessWidget {
                     padding: const EdgeInsets.all(5),
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Color(0x00e40a15),
+                      color: Color(0xffe40a15),
                     ),
                     child: Icon(
                       songProvider.isPlaying

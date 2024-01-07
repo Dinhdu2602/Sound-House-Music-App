@@ -1,18 +1,18 @@
 final List<Map<String, dynamic>> slider = [
   {
     "title": "30 Fresh music for you every week ",
-    "image": "assets/album/yourDiscover.png",
+    "image": "yourDiscover.png",
   },
   {
     "title": "New songs every friday",
-    "image": "assets/album/friday.png",
+    "image": "friday.png",
   },
 ];
 
 List<Map<String, dynamic>> artists = [
-  {'image': 'assets/album/artist1.png', 'name': 'The Kid LAROI'},
-  {'image': 'assets/album/artist2.png', 'name': 'Taylor Swift'},
-  {'image': 'assets/album/artist3.png', 'name': 'Post Malone'}
+  {'image': 'artist1.png', 'name': 'The Kid LAROI'},
+  {'image': 'artist2.png', 'name': 'Taylor Swift'},
+  {'image': 'artist3.png', 'name': 'Post Malone'}
 ];
 
 List<String> searchList = [
@@ -29,47 +29,47 @@ final List<Map<String, dynamic>> podCast = [
   {
     "title": "Impaulsive",
     "description": "334 ep.",
-    "image": "assets/album/impaulsive.png",
+    "image": "impaulsive.png",
   },
   {
     "title": "TED Talks Daily",
     "description": "155 ep.",
-    "image": "assets/album/tedTalk.png",
+    "image": "tedTalk.png",
   },
   {
     "title": "Mom’s Basement",
     "description": "75 ep.",
-    "image": "assets/album/momsBasement.png",
+    "image": "momsBasement.png",
   },
 ];
 
 final List<Map<String, dynamic>> playList = [
   {
-    'image_1': 'assets/cover/beforeyougo.png',
-    'image_2': 'assets/cover/Maroon 5.png',
-    'image_3': 'assets/cover/usuk.jpg',
-    'image_4': 'assets/album/playlist1.png',
+    'image_1': 'beforeyougo.png',
+    'image_2': 'Maroon 5.jpg',
+    'image_3': 'usuk.jpg',
+    'image_4': 'playlist1.png',
     'title': 'Playlist #1'
   },
   {
-    'image_1': 'assets/album/playList5.png',
-    'image_2': 'assets/album/playList6.png',
-    'image_3': 'assets/album/playList7.png',
-    'image_4': 'assets/album/playList8.png',
+    'image_1': 'playList5.png',
+    'image_2': 'playList6.png',
+    'image_3': 'playList7.png',
+    'image_4': 'playList8.png',
     'title': 'Playlist #2'
   },
   {
-    'image_1': 'assets/album/playList9.png',
-    'image_2': 'assets/album/playList10.png',
-    'image_3': 'assets/album/playList11.png',
-    'image_4': 'assets/album/playList12.png',
+    'image_1': 'playList9.png',
+    'image_2': 'playList10.png',
+    'image_3': 'playList11.png',
+    'image_4': 'playList12.png',
     'title': 'Playlist #3'
   },
   {
-    'image_1': 'assets/album/playList13.png',
-    'image_2': 'assets/album/playList14.png',
-    'image_3': 'assets/album/playList3.png',
-    'image_4': 'assets/album/playList16.png',
+    'image_1': 'playList13.png',
+    'image_2': 'playList14.png',
+    'image_3': 'playList3.png',
+    'image_4': 'playList16.png',
     'title': 'Playlist #4'
   },
 ];

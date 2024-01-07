@@ -23,7 +23,7 @@ class _LoginFormState extends State<LoginForm> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5),
       child: TextFormField(
-        style: TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.white),
         obscureText: pass ? _isObscure : false,
         decoration: InputDecoration(
           labelText: label,
