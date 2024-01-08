@@ -47,8 +47,9 @@ class SongProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  final audioPlayer = AudioPlayer();
+  late AudioPlayer audioPlayer;
   setAudio(String song) async {
+    audioPlayer = AudioPlayer();
     audioPlayer.setReleaseMode(ReleaseMode.stop);
     final player = AudioCache(prefix: 'assets/song/');
     final url = await player.load(song);

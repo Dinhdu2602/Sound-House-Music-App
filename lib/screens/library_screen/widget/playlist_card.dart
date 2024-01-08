@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
-import 'package:sound_house_app/models/data.dart';
+import '../../../../models/data.dart';
 
 class PlayListCard extends StatelessWidget {
   const PlayListCard({

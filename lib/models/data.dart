@@ -29,78 +29,78 @@ final List<Map<String, dynamic>> podCast = [
   {
     "title": "Impaulsive",
     "description": "334 ep.",
-    "image": "impaulsive.png",
+    "image": "assets/images/impaulsive.png",
   },
   {
     "title": "TED Talks Daily",
     "description": "155 ep.",
-    "image": "tedTalk.png",
+    "image": "assets/images/tedTalk.png",
   },
   {
     "title": "Mom’s Basement",
     "description": "75 ep.",
-    "image": "momsBasement.png",
+    "image": "assets/images/momsBasement.png",
   },
 ];
 
 final List<Map<String, dynamic>> playList = [
   {
-    'image_1': 'beforeyougo.png',
-    'image_2': 'Maroon 5.jpg',
-    'image_3': 'usuk.jpg',
-    'image_4': 'playlist1.png',
+    'image_1': 'assets/images/playList1.png',
+    'image_2': 'assets/images/playList2.png',
+    'image_3': 'assets/images/playList3.png',
+    'image_4': 'assets/images/playList4.png',
     'title': 'Playlist #1'
   },
   {
-    'image_1': 'playList5.png',
-    'image_2': 'playList6.png',
-    'image_3': 'playList7.png',
-    'image_4': 'playList8.png',
+    'image_1': 'assets/images/playList5.png',
+    'image_2': 'assets/images/playList6.png',
+    'image_3': 'assets/images/playList7.png',
+    'image_4': 'assets/images/playList8.png',
     'title': 'Playlist #2'
   },
   {
-    'image_1': 'playList9.png',
-    'image_2': 'playList10.png',
-    'image_3': 'playList11.png',
-    'image_4': 'playList12.png',
+    'image_1': 'assets/images/playList9.png',
+    'image_2': 'assets/images/playList10.png',
+    'image_3': 'assets/images/playList11.png',
+    'image_4': 'assets/images/playList12.png',
     'title': 'Playlist #3'
   },
   {
-    'image_1': 'playList13.png',
-    'image_2': 'playList14.png',
-    'image_3': 'playList3.png',
-    'image_4': 'playList16.png',
+    'image_1': 'assets/images/playList13.png',
+    'image_2': 'assets/images/playList14.png',
+    'image_3': 'assets/images/playList3.png',
+    'image_4': 'assets/images/playList16.png',
     'title': 'Playlist #4'
   },
 ];
 
 final List<Map<String, dynamic>> topHit = [
   {
-    'image': 'assets/album/music1.png',
+    'image': 'music1.png',
     'title': 'stay',
     'description': 'The Kid LAROI, Justin Bieber',
     'favorite': true,
   },
   {
-    'image': 'assets/album/wishingWall.png',
+    'image': 'wishingWall.png',
     'title': 'Wishing Well',
     'description': 'Juice WLRD',
     'favorite': false,
   },
   {
-    'image': 'assets/album/jack.png',
+    'image': 'jack.png',
     'title': 'First Class',
     'description': 'Jack Harlow',
     'favorite': true,
   },
   {
-    'image': 'assets/album/Frame1.png',
+    'image': 'Frame1.png',
     'title': 'Unstable',
     'description': 'Justin Bieber, The Kid LAROI',
     'favorite': false,
   },
   {
-    'image': 'assets/album/Group25.png',
+    'image': 'Group25.png',
     'title': 'Unstable',
     'description': 'Justin Bieber, The Kid LAROI',
     'favorite': false,
