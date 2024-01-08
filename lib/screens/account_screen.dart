@@ -2,6 +2,7 @@ import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/models/user.dart';
 import 'package:sound_house_app/screens/edit_profile_screen.dart';
+import 'package:sound_house_app/screens/premium/premium.dart';
 import 'package:sound_house_app/utils/user_preferences.dart';
 import 'package:sound_house_app/widget/account_appbar.dart';
 import 'package:sound_house_app/widget/account_button.dart';
@@ -65,7 +66,13 @@ class _AccountScreenState extends State<AccountScreen> {
 
   Widget buildUpgradeButton() => ButtonWidget(
         text: 'Upgrade to Premium',
-        onClicked: () {},
+        onClicked: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Premium(),
+              ));
+        },
       );
   Widget buildAbout(User user) => Container(
         padding: const EdgeInsets.symmetric(horizontal: 48),

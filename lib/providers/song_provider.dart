@@ -51,10 +51,10 @@ class SongProvider with ChangeNotifier {
   setAudio(String song) async {
     audioPlayer = AudioPlayer();
     audioPlayer.setReleaseMode(ReleaseMode.stop);
-    final player = AudioCache(prefix: 'assets/song/');
-    final url = await player.load(song);
-    audioPlayer.setSourceUrl(url.path);
-    audioPlayer.play(AssetSource(url.path));
+    //final player = AudioCache(prefix: 'assets/song/');
+    //final url = await player.load(song);
+    //audioPlayer.setSourceUrl(url.path);
+    audioPlayer.play(AssetSource('song/$song'));
     audioPlayer.onPlayerStateChanged.listen((event) {
       isPlaying = event == PlayerState.playing;
     });

@@ -3,6 +3,7 @@ import 'package:sound_house_app/constants/const.dart';
 import 'package:sound_house_app/providers/fav_provider.dart';
 import 'package:sound_house_app/providers/package_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
+import 'package:sound_house_app/screens/package_page.dart';
 import 'package:sound_house_app/widget/blur.dart';
 
 class MusicController extends StatelessWidget {
@@ -157,49 +158,52 @@ class MusicController extends StatelessWidget {
             packageProvider.currentPackage != null
                 ? Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 40,
-                          width: 40,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            image: DecorationImage(
-                              image: AssetImage(
-                                  'assets/packages/${packageProvider.currentPackage!.image!}'),
-                              fit: BoxFit.cover,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const PackagePage()));
+                      },
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(7),
+                                image: DecorationImage(
+                                    image: AssetImage(
+                                        'assets/package/${packageProvider.currentPackage!.image!}'),
+                                    fit: BoxFit.cover)),
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  'From playlist',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 11),
+                                ),
+                                const SizedBox(height: 5),
+                                Text(packageProvider.currentPackage!.name!,
+                                    style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold)),
+                              ],
                             ),
                           ),
-                        ),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text(
-                                'From playlist',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 11),
-                              ),
-                              const SizedBox(height: 5),
-                              Text(
-                                packageProvider.currentPackage!.name!,
-                                style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.keyboard_arrow_right_rounded,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+                          IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.keyboard_arrow_right_rounded,
+                                color: Colors.white,
+                              ))
+                        ],
+                      ),
                     ),
                   )
                 : Container()

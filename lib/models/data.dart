@@ -106,3 +106,20 @@ final List<Map<String, dynamic>> topHit = [
     'favorite': false,
   },
 ];
+
+class Data {
+  var carousel = [
+    {
+      'free': 'Ad breaks',
+      'premium': 'Ad-free music',
+    },
+    {
+      'free': 'Streaming only',
+      'premium': 'Download songs',
+    },
+    {
+      'free': 'Listen alone',
+      'premium': 'Group session',
+    },
+  ];
+}
