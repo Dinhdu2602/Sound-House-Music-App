@@ -17,28 +17,6 @@ class WhatNews extends StatelessWidget {
         decoration: BoxDecoration(
           color: const Color(0xff121111),
           borderRadius: BorderRadius.circular(40 * fem),
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-            BoxShadow(
-              color: const Color(0x3f000000),
-              offset: Offset(0 * fem, 4 * fem),
-              blurRadius: 2 * fem,
-            ),
-          ],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sound_house_app/screens/account_screen.dart';
 
 class MoreTitle extends StatelessWidget {
   const MoreTitle({
@@ -34,7 +35,13 @@ class MoreTitle extends StatelessWidget {
             Icons.person_sharp,
             color: Colors.white,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AccountScreen(),
+                ));
+          },
         ),
       ],
     );
