@@ -34,6 +34,7 @@ List<AlbumModel> albums = [
       listSongs[4],
       listSongs[6],
       listSongs[5],
+      listSongs[9],
     ],
   ),
   AlbumModel(
@@ -67,6 +68,8 @@ List<AlbumModel> albums = [
       listSongs[17],
       listSongs[18],
       listSongs[19],
+      listSongs[20],
+      listSongs[21],
     ],
   ),
   AlbumModel(
@@ -92,6 +95,13 @@ List<AlbumModel> albums = [
       listSongs[6],
       listSongs[2],
       listSongs[5],
+      listSongs[11],
+      listSongs[10],
+      listSongs[13],
+      listSongs[14],
+      listSongs[16],
+      listSongs[12],
+      listSongs[15],
     ],
   ),
 ];

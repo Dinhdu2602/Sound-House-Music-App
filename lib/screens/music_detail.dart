@@ -6,6 +6,7 @@ import 'package:sound_house_app/providers/package_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
 import 'package:sound_house_app/widget/music_controller.dart';
 import 'package:sound_house_app/widget/song_lyric.dart';
+import 'package:share_plus/share_plus.dart';
 
 class MusicDetail extends StatefulWidget {
   const MusicDetail({super.key});
@@ -66,7 +67,14 @@ class _MusicDetailState extends State<MusicDetail> {
                 icon: const Icon(Icons.keyboard_arrow_left_rounded),
                 color: Colors.white),
             actions: [
-              IconButton(onPressed: () {}, icon: const Icon(Icons.share)),
+              IconButton(
+                  onPressed: () async {
+                    String imageFilePath =
+                        'assets/cover/${songProvider.currentSong!.image!}';
+                    String mp3FilePath =
+                        'assets/song/${songProvider.currentSong!.songUrl!}';
+                  },
+                  icon: const Icon(Icons.share)),
               IconButton(
                   onPressed: () {}, icon: const Icon(Icons.more_vert_rounded)),
             ],
@@ -84,5 +92,15 @@ class _MusicDetailState extends State<MusicDetail> {
         ),
       ],
     );
+  }
+
+  Future<void> shareSong(String mp3FilePath, String imageFilePath) async {
+    try {
+      final List<String> files = [mp3FilePath, imageFilePath];
+      // ignore: deprecated_member_use
+      await Share.shareFiles(files, text: 'Check out this song!');
+    } catch (e) {
+      print('Error sharing files: $e');
+    }
   }
 }
