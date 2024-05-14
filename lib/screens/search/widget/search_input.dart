@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
+import 'package:sound_house_app/screens/search/search_song_screen.dart';
 
 class SearchInput extends StatelessWidget {
   const SearchInput({
@@ -9,6 +10,7 @@ class SearchInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onChanged: (value) => const SearchSongScreen(),
       style: const TextStyle(color: Colors.white, fontSize: 11),
       decoration: InputDecoration(
         filled: true,

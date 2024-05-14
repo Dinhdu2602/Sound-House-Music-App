@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:sound_house_app/constants/theme.dart';
 import 'package:sound_house_app/screens/Signin-Signout/reset_password_page.dart';
 import 'package:sound_house_app/screens/Signin-Signout/sign_up_page.dart';
-import 'package:sound_house_app/screens/home_page.dart';
 import 'package:sound_house_app/screens/main_page.dart';
 import 'package:sound_house_app/widget/login_form.dart';
 
