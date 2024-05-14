@@ -1,5 +1,5 @@
 class SongModel {
-  final String? idSong, singer, title, songUrl, image, lyric;
+  final String? idSong, singer, title, songUrl, image, lyric, listens;
   final List<String>? likes;
 
   SongModel({
@@ -10,6 +10,7 @@ class SongModel {
     this.singer,
     this.songUrl,
     this.title,
+    this.listens,
   });
 }
 
@@ -21,6 +22,7 @@ List<SongModel> listSongs = [
       songUrl: 'Adele-EasyOnMe(OfficialLyricVideo).mp3',
       image: 'Adele - Easy On Me (Official Lyric Video).jpg',
       lyric: 'Adele - Easy On Me (Official Lyric Video).lrc',
+      listens: '5K',
       likes: [
         'user1',
         'user2',
@@ -37,6 +39,7 @@ List<SongModel> listSongs = [
     songUrl: 'Lyodra,AndiRianto-SangDewi(OfficialLyricVideo).mp3',
     image: 'Lyodra, Andi Rianto - Sang Dewi (Official Lyric Video).jpg',
     lyric: '',
+    listens: '132',
     likes: [
       'user2',
       'user3',
@@ -51,6 +54,7 @@ List<SongModel> listSongs = [
     songUrl: 'MawardeJongh-LebihDariEgoku-OfficialMusicVideo.mp3',
     image: 'Mawar de Jongh - Lebih Dari Egoku - Official Music Video.jpg',
     lyric: 'Mawar de Jongh - Lebih Dari Egoku - Official Music Video.lrc',
+    listens: '23',
     likes: [
       'user2',
       'user3',
@@ -64,6 +68,7 @@ List<SongModel> listSongs = [
     songUrl: 'NadinAmizah-Bertaut(OfficialMusicVideo).mp3',
     image: 'Nadin Amizah - Bertaut (Official Music Video).jpg',
     lyric: 'Nadin Amizah - Bertaut (Official Music Video).lrc',
+    listens: '11',
     likes: [
       'user2',
       'user3',
@@ -76,6 +81,7 @@ List<SongModel> listSongs = [
     songUrl: 'WeirdGenius-Lathi(ft.SaraFajira)OfficialMusicVideo.mp3',
     image: 'Weird Genius - Lathi (ft. Sara Fajira) Official Music Video.jpg',
     lyric: 'Weird Genius - Lathi (ft. Sara Fajira) Official Music Video.lrc',
+    listens: '20',
     likes: [
       'user2',
       'user3',
@@ -89,6 +95,7 @@ List<SongModel> listSongs = [
     songUrl: 'RizkyFebian-CukupTau(OfficialMusicVideo).mp3',
     image: 'Rizky Febian - Cukup Tau (Official Music Video).png',
     lyric: 'Rizky Febian - Cukup Tau (Official Music Video).lrc',
+    listens: '85',
     likes: [
       'user2',
       'user3',
@@ -102,6 +109,7 @@ List<SongModel> listSongs = [
     songUrl: 'KeisyaLevronka-TakInginUsaiOfficialLyricVideo.mp3',
     image: 'Keisya Levronka - Tak Ingin Usai Official Lyric Video.png',
     lyric: 'Keisya Levronka - Tak Ingin Usai Official Lyric Video.lrc',
+    listens: '67',
     likes: [
       'user2',
       'user3',
@@ -116,6 +124,7 @@ List<SongModel> listSongs = [
         'yt1s.com - WREN EVANS  Call Me  LOI CHOI The First Album ft itsnk.mp3',
     image: 'Call me.jpg',
     lyric: '',
+    listens: '1M',
     likes: [
       'user2',
       'user3',
@@ -136,6 +145,7 @@ List<SongModel> listSongs = [
     songUrl: 'MONO - Waiting For You (Album 22 - Track No.10).mp3',
     image: 'waiting for you.jpg',
     lyric: '',
+    listens: '1.2M',
     likes: [
       'user2',
       'user3',
@@ -157,6 +167,7 @@ List<SongModel> listSongs = [
     songUrl: 'tp-muon-roi-ma-sao-con-official-music-video.mp3',
     image: 'muộn rồi mà sao còn.jpg',
     lyric: '',
+    listens: '5M',
     likes: [
       'user2',
       'user3',
@@ -177,6 +188,7 @@ List<SongModel> listSongs = [
     songUrl: 'yt1s.com - Anh Đã Sai  OnlyC Official MV.mp3',
     image: 'Anh đã sai.jpg',
     lyric: '',
+    listens: '9K',
     likes: [
       'user2',
       'user3',
@@ -198,6 +210,7 @@ List<SongModel> listSongs = [
         'yt1s.com - Bật Tình Yêu Lên  Hòa Minzy x Tăng Duy Tân  MV Lyrics.mp3',
     image: 'Bật tình yêu lên.jpg',
     lyric: '',
+    listens: '2M',
     likes: [
       'user2',
       'user3',
@@ -219,6 +232,7 @@ List<SongModel> listSongs = [
         'yt1s.com - Đạt G  Anh Tự Do Nhưng Cô Đơn  Live at DearOcean DatGMusic.mp3',
     image: 'Anh tự do nhưng cô đơn.jpg',
     lyric: '',
+    listens: '9K',
     likes: [
       'user2',
       'user3',
@@ -239,6 +253,7 @@ List<SongModel> listSongs = [
     songUrl: 'yt1s.com - ERIK  SAU TẤT CẢ  Official Music Video.mp3',
     image: 'Sau tất cả.jpg',
     lyric: '',
+    listens: '1M',
     likes: [
       'user2',
       'user3',
@@ -259,6 +274,7 @@ List<SongModel> listSongs = [
     songUrl: 'yt1s.com - GREY D x 52Hz  nhạtfine  performance video.mp3',
     image: 'nhạtfine.jpg',
     lyric: '',
+    listens: '7K',
     likes: [
       'user2',
       'user3',
@@ -279,6 +295,7 @@ List<SongModel> listSongs = [
     songUrl: 'yt1s.com - Hoàng Thuỳ Linh  See Tình  Official Music Video.mp3',
     image: 'See tình.jpg',
     lyric: '',
+    listens: '6M',
     likes: [
       'user2',
       'user3',
@@ -299,6 +316,7 @@ List<SongModel> listSongs = [
     songUrl: 'yt1s.com - Madihu  Có em Feat Low G Official MV.mp3',
     image: 'Có em.jpg',
     lyric: '',
+    listens: '8K',
     likes: [
       'user2',
       'user3',
@@ -319,6 +337,7 @@ List<SongModel> listSongs = [
     songUrl: 'yt1s.com - NGƯỜI ẤY  TRỊNH THĂNG BÌNH  HEADPHONE SHOW.mp3',
     image: 'Người ấy.jpg',
     lyric: '',
+    listens: '4K',
     likes: [
       'user2',
       'user3',
@@ -339,6 +358,7 @@ List<SongModel> listSongs = [
     songUrl: 'yt1s.com - QUÂN AP  Còn Gì Đau Hơn Chữ Đã Từng  Lyrics Audio.mp3',
     image: 'Congidauhonchudatung.jpg',
     lyric: '',
+    listens: '3K',
     likes: [
       'user2',
       'user3',
@@ -360,6 +380,7 @@ List<SongModel> listSongs = [
         'yt1s.com - Sớm Mai  PiaLinh Ronboogz BONNEX Official Music Video.mp3',
     image: 'Pialinh.jpg',
     lyric: '',
+    listens: '1M',
     likes: [
       'user2',
       'user3',
@@ -381,6 +402,7 @@ List<SongModel> listSongs = [
         'yt1s.com - PHÚC DU  yêu anh đi mẹ anh bán bánh mì MV OFFICIAL.mp3',
     image: 'PhucDu.jpg',
     lyric: '',
+    listens: '4M',
     likes: [
       'user2',
       'user3',
@@ -400,6 +422,7 @@ List<SongModel> listSongs = [
     singer: 'LowG',
     songUrl: 'yt1s.com - Không Thích  Low G  Rap Nhà Làm.mp3',
     image: 'LowG.jpg',
+    listens: '8K',
     lyric: '',
     likes: [
       'user2',
