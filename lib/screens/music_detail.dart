@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lyric/lyrics_reader.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:sound_house_app/providers/fav_provider.dart';
 import 'package:sound_house_app/providers/package_provider.dart';
@@ -69,10 +70,10 @@ class _MusicDetailState extends State<MusicDetail> {
             actions: [
               IconButton(
                   onPressed: () async {
-                    String imageFilePath =
-                        'assets/cover/${songProvider.currentSong!.image!}';
-                    String mp3FilePath =
-                        'assets/song/${songProvider.currentSong!.songUrl!}';
+                    final song = await ImagePicker()
+                        .pickVideo(source: ImageSource.gallery);
+                    if (song == null) return;
+                    await Share.shareXFiles([XFile(song.path)]);
                   },
                   icon: const Icon(Icons.share)),
               IconButton(
@@ -92,15 +93,5 @@ class _MusicDetailState extends State<MusicDetail> {
         ),
       ],
     );
-  }
-
-  Future<void> shareSong(String mp3FilePath, String imageFilePath) async {
-    try {
-      final List<String> files = [mp3FilePath, imageFilePath];
-      // ignore: deprecated_member_use
-      await Share.shareFiles(files, text: 'Check out this song!');
-    } catch (e) {
-      print('Error sharing files: $e');
-    }
   }
 }

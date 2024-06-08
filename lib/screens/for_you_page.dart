@@ -42,7 +42,9 @@ class _ForYouScreenState extends State<ForYouScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.redAccent,
         title: const Text('Upload Your Songs'),
       ),
       body: Column(
@@ -53,7 +55,7 @@ class _ForYouScreenState extends State<ForYouScreen> {
               children: [
                 const Text(
                   'Upload your composed songs here!',
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
                 const SizedBox(height: 10),
                 ElevatedButton(

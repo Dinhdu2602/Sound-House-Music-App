@@ -70,7 +70,7 @@ class _SearchSongScreenState extends State<SearchSongScreen> {
               height: 20,
             ),
             Expanded(
-              child: display_list.length == 0
+              child: display_list.isEmpty
                   ? const Center(
                       child: Text(
                         "No result found",
@@ -102,7 +102,8 @@ class _SearchSongScreenState extends State<SearchSongScreen> {
                           "${display_list[index].listens}",
                           style: const TextStyle(color: Colors.amber),
                         ),
-                        leading: Image.asset(display_list[index].image!),
+                        leading: Image.asset(
+                            'assets/cover/${display_list[index].image}'),
                       ),
                     ),
             ),

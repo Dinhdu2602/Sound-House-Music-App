@@ -4,7 +4,7 @@ import 'package:sound_house_app/models/album.dart';
 class AlbumProvider with ChangeNotifier {
   AlbumModel? _currentAlbum;
   AlbumModel? get currentAlbum => _currentAlbum;
-  set currentPackage(AlbumModel? current) {
+  set currentAlbum(AlbumModel? current) {
     _currentAlbum = current;
     notifyListeners();
   }

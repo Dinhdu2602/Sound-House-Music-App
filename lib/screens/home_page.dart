@@ -4,6 +4,8 @@ import 'package:sound_house_app/models/album.dart';
 import 'package:sound_house_app/models/artists.dart';
 import 'package:sound_house_app/models/packages.dart';
 import 'package:sound_house_app/models/songs.dart';
+import 'package:sound_house_app/providers/album_provider.dart';
+import 'package:sound_house_app/screens/album_page.dart';
 import 'package:sound_house_app/screens/music_detail.dart';
 import 'package:sound_house_app/screens/package_page.dart';
 import 'package:sound_house_app/providers/package_provider.dart';
@@ -30,6 +32,7 @@ class _HomePageState extends State<HomePage> {
     List<PackageModel> popularHits = packages.reversed.toList();
     List<AlbumModel> popularAlbum = albums;
     PackageProvider packageProvider = Provider.of<PackageProvider>(context);
+    AlbumProvider albumProvider = Provider.of<AlbumProvider>(context);
     SongProvider songProvider = Provider.of<SongProvider>(context);
     return Scaffold(
       backgroundColor: Colors.black,
@@ -249,10 +252,22 @@ class _HomePageState extends State<HomePage> {
                                 padding: index == 0
                                     ? const EdgeInsets.only(left: 10, right: 10)
                                     : const EdgeInsets.only(left: 10),
-                                child: SongPakageItem(
-                                    image:
-                                        'package/${popularAlbum[index].image}',
-                                    text: popularAlbum[index].name!),
+                                child: GestureDetector(
+                                  onTap: () {
+                                    albumProvider.currentAlbum =
+                                        popularAlbum[index];
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => const AlbumPage(),
+                                      ),
+                                    );
+                                  },
+                                  child: SongPakageItem(
+                                      image:
+                                          'package/${popularAlbum[index].image}',
+                                      text: popularAlbum[index].name!),
+                                ),
                               ))
                     ],
                   ),

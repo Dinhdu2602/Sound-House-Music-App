@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sound_house_app/screens/account_screen.dart';
+import 'package:sound_house_app/screens/for_you_page.dart';
 import 'package:sound_house_app/screens/home_page.dart';
 import 'package:sound_house_app/screens/library_screen/library.dart';
 import 'package:sound_house_app/screens/music_detail.dart';
 import 'package:sound_house_app/providers/page_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
 import 'package:sound_house_app/screens/search/search_screen.dart';
+import 'package:sound_house_app/screens/search/search_song_screen.dart';
 import 'package:sound_house_app/widget/blur.dart';
 import 'package:sound_house_app/widget/current_song.dart';
 import 'package:sound_house_app/widget/custom_bottom_nav.dart';
@@ -30,14 +32,11 @@ class _MainPageState extends State<MainPage> {
           return const HomePage();
         case 1:
           return const SearchPage();
+        //return const SearchSongScreen();
         case 2:
           return const LibraryPage();
         case 3:
-          return const Center(
-              child: Text(
-            'For you',
-            style: TextStyle(color: Color(0xFFE40A15), fontSize: 32),
-          ));
+          return const ForYouScreen();
         case 4:
           return const AccountScreen();
         default:

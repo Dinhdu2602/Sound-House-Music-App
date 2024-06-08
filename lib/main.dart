@@ -3,13 +3,13 @@ import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sound_house_app/constants/theme.dart';
+import 'package:sound_house_app/providers/album_provider.dart';
 import 'package:sound_house_app/providers/fav_provider.dart';
 import 'package:sound_house_app/providers/package_provider.dart';
 import 'package:sound_house_app/providers/page_provider.dart';
 import 'package:sound_house_app/providers/recent_played_provider.dart';
 import 'package:sound_house_app/providers/song_provider.dart';
 import 'package:sound_house_app/screens/Signin-Signout/get_started_page.dart';
-import 'package:sound_house_app/screens/music_detail.dart';
 import 'package:sound_house_app/utils/user_preferences.dart';
 
 Future<void> main() async {
@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => PageProvider()),
         ChangeNotifierProvider(create: (context) => PackageProvider()),
+        ChangeNotifierProvider(create: (context) => AlbumProvider()),
         ChangeNotifierProvider(create: (context) => SongProvider()),
         ChangeNotifierProvider(create: (context) => FavProvider()),
         ChangeNotifierProvider(create: (context) => RecentProvider()),
