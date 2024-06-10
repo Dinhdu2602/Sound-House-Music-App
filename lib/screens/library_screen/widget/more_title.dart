@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sound_house_app/screens/account_screen.dart';
+import 'package:sound_house_app/screens/music_recommendation/music_recommendation_screen/music_recommendation_screen.dart';
 
 class MoreTitle extends StatelessWidget {
   const MoreTitle({
@@ -28,7 +29,13 @@ class MoreTitle extends StatelessWidget {
             Icons.search,
             color: Colors.white,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MusicRecommendationScreen(),
+                ));
+          },
         ),
         IconButton(
           icon: const Icon(

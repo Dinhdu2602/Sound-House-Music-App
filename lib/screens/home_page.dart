@@ -6,6 +6,7 @@ import 'package:sound_house_app/models/packages.dart';
 import 'package:sound_house_app/models/songs.dart';
 import 'package:sound_house_app/providers/album_provider.dart';
 import 'package:sound_house_app/screens/album_page.dart';
+import 'package:sound_house_app/screens/for_you_page.dart';
 import 'package:sound_house_app/screens/music_detail.dart';
 import 'package:sound_house_app/screens/package_page.dart';
 import 'package:sound_house_app/providers/package_provider.dart';

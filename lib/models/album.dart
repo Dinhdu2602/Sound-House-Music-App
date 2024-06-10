@@ -28,6 +28,7 @@ List<AlbumModel> albums = [
     name: 'M-TP Album',
     image: 'Sontungmtpalbumcover.jpg',
     songs: [
+      listSongs[22],
       listSongs[2],
       listSongs[0],
       listSongs[1],
@@ -35,6 +36,7 @@ List<AlbumModel> albums = [
       listSongs[6],
       listSongs[5],
       listSongs[9],
+      listSongs[8],
     ],
   ),
   AlbumModel(
@@ -70,6 +72,7 @@ List<AlbumModel> albums = [
       listSongs[19],
       listSongs[20],
       listSongs[21],
+      listSongs[22],
     ],
   ),
   AlbumModel(

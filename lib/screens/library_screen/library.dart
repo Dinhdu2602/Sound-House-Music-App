@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sound_house_app/screens/library_screen/widget/activity_card.dart';
 import 'package:sound_house_app/screens/library_screen/widget/more_title.dart';
 import 'package:sound_house_app/screens/library_screen/widget/playlist_card.dart';
+import 'package:sound_house_app/screens/search/search_song_screen.dart';
 import 'package:sound_house_app/widget/custom_title.dart';
 
 class LibraryPage extends StatelessWidget {
@@ -23,7 +24,13 @@ class LibraryPage extends StatelessWidget {
             Align(
               alignment: Alignment.center,
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SearchSongScreen(),
+                        ));
+                  },
                   child: const Text('See all',
                       style: TextStyle(
                         fontSize: 15,

@@ -23,6 +23,7 @@ class _SearchSongScreenState extends State<SearchSongScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0.0,
@@ -34,7 +35,7 @@ class _SearchSongScreenState extends State<SearchSongScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              "Search for a song",
+              "See All",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 22.0,
